@@ -7,7 +7,7 @@ const getFileNamesIn = async (dir: string) =>
 		fileName.replace(/\.md/, '')
 	);
 
-type ProjectGetter = (lang: Lang) => ReturnType<typeof getFileNamesIn>;
+export type ProjectGetter = (lang: Lang) => ReturnType<typeof getFileNamesIn>;
 
 export const getSites: ProjectGetter = (lang) =>
 	getFileNamesIn(lang + '/sites');
