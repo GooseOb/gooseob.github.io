@@ -2,26 +2,117 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@media (prefers-color-scheme: light) {
+	hr {
+		@apply border-black;
+	}
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+	body {
+		@apply text-white;
+	}
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+a {
+	@apply text-link-light dark:text-link-dark;
+	font-weight: bold;
+	transition: 0.2s;
+}
+
+a:hover {
+	@apply text-hoverlink-light dark:text-hoverlink-dark;
+}
+
+.links-color-dark a {
+	@apply text-link-dark hover:text-hoverlink-dark;
+}
+
+select {
+	cursor: pointer;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #fff3;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 1rem;
+	background: #fff4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #fff6;
+}
+
+.object-position-animation:hover {
+	animation: ltr 2s alternate infinite;
+}
+
+@keyframes ltr {
+	0% {
+		object-position: 0% 0%;
+	}
+	100% {
+		object-position: 100% 100%;
+	}
+}
+
+.content-from-markdown {
+	p {
+		@apply my-3;
+	}
+	h3,
+	h4 {
+		@apply font-bold text-center;
+	}
+	h3 {
+		@apply text-3xl;
+	}
+	h4 {
+		@apply text-xl;
+	}
+	li {
+		@apply list-disc ml-5;
+	}
+	img {
+		@apply mx-auto my-3 md:max-w-[80%];
+	}
+}
+
+.home-content-from-markdown {
+	p {
+		@apply my-3 text-xl;
+	}
+	h2,
+	h3,
+	h4 {
+		@apply font-bold text-center;
+	}
+	h2 {
+		@apply text-4xl;
+	}
+	h3 {
+		@apply text-3xl;
+	}
+	h4 {
+		@apply text-2xl;
+	}
+	img {
+		min-height: 1.5em;
+	}
+}
+
+.project-stack {
+	& > div {
+		@apply flex flex-col gap-3;
+	}
+	img {
+		display: inline;
+		min-height: 1.5em;
+	}
 }

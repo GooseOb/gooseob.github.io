@@ -1,0 +1,26 @@
+{
+	"en": {
+		"stack": "Technology stack",
+		"styles": "Styles",
+		"builders": "Builders",
+		"tools": "Tools",
+		"also-worked": "Also worked with",
+		"stats": "Stats"
+	},
+	"be": {
+		"stack": "Тэхналягічны стэк",
+		"styles": "Стылі",
+		"builders": "Зборшчыкі",
+		"tools": "Інструмэнты",
+		"also-worked": "Таксама працаваў з",
+		"stats": "Статыстыка"
+	},
+	"pl": {
+		"stack": "Stos technologiczny",
+		"styles": "Style",
+		"builders": "Buildery",
+		"tools": "Narzędzia",
+		"also-worked": "Też pracowałem z",
+		"stats": "Statystyki"
+	}
+}

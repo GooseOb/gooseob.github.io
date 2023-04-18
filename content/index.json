@@ -1,0 +1,45 @@
+{
+	"index": {
+		"stack": "TypeScript, Next.js (appDir), TailwindCSS"
+	},
+	"sites": {
+		"passports": {
+			"name": "passports",
+			"type": "pet",
+			"repo": "https://github.com/GooseOb/passports",
+			"url": "https://gooseob.github.io/passports/",
+			"stack": "JavaScript -> TypeScript, GULP -> Vite, SASS; google apps scripts (JavaScript with their own API)"
+		},
+		"shop-app": {
+			"name": "shop-app",
+			"type": "training",
+			"repo": "https://github.com/GooseOb/shop-app",
+			"url": "https://gooseob.github.io/shop-app/",
+			"stack": "TypeScript, React, Redux Toolkit, MaterialUI, SASS (modules)"
+		},
+		"taraskevizatar": {
+			"name": "taraskevizatar",
+			"type": "pet",
+			"repo": "https://github.com/GooseOb/taraskevizatar",
+			"url": "https://gooseob.github.io/taraskevizatar/",
+			"stack": "JavaScript -> TypeScript, GULP -> Webpack, SASS"
+		}
+	},
+	"userscripts": {
+		"svajksta-free": {
+			"name": "svajksta-free",
+			"repo": "https://github.com/GooseOb/svajksta-free",
+			"url": "https://greasyfork.org/en/scripts/461064-svajksta-free"
+		},
+		"telegram-photo-protection-remover": {
+			"name": "telegram-photo-protection-remover",
+			"repo": "https://github.com/GooseOb/telegram-photo-protection-remover",
+			"url": "https://greasyfork.org/en/scripts/443342-telegram-photo-protection-remover"
+		},
+		"yt-defaulter": {
+			"name": "YT-Defaulter",
+			"repo": "https://github.com/GooseOb/YT-Defaulter",
+			"url": "https://greasyfork.org/en/scripts/454696-youtube-defaulter"
+		}
+	}
+}
