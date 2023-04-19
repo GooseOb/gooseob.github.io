@@ -3,6 +3,7 @@
 	"author": "GooseOb",
 	"license": "MIT",
 	"private": true,
+	"homepage": "https://gooseob.github.io/",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
