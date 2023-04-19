@@ -14,7 +14,7 @@ const UserscriptPage: ProjectPage = ({ params }) => {
 					<IconLink
 						href={meta.url}
 						alt='go to greasyfork'
-						src='/greasyfork.png'
+						src='/assets/greasyfork.png'
 					/>
 				)}
 				<h1>{meta.name}</h1>
