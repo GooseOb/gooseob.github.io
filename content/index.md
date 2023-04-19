@@ -34,6 +34,5 @@ Bash PHP Markdown
 #### 📊@dict(stats)
 @style(margin-top: 1em)
 
-[//]: # (![GooseOb github stats]&#40;https://github-readme-stats.vercel.app/api?username=GooseOb&show_icons=true&theme=ocean_dark&#41;)
-
-[//]: # (![Top Langs]&#40;https://github-readme-stats.vercel.app/api/top-langs/?username=GooseOb&layout=compact&theme=ocean_dark&#41;)
+![GooseOb github stats](https://github-readme-stats.vercel.app/api?username=GooseOb&show_icons=true&theme=ocean_dark)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=GooseOb&layout=compact&theme=ocean_dark)
