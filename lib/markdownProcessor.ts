@@ -32,7 +32,7 @@ const resolveImportsHelper = async (pathName: string): Promise<string> => {
 };
 
 const resolveAlias = (text: string, pathName: string) =>
-	text.replace(/]\(@(?=\/)/g, '](/' + pathName);
+	text.replace(/]\(@(?=\/)/g, '](/assets/' + pathName);
 
 const resolveCustomFunctions = (text: string, lang: Lang) =>
 	text.replace(

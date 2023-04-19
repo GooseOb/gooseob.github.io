@@ -16,12 +16,12 @@ const GithubIcon: FC<Props> = ({ repo }) => {
 			<IconLink
 				{...commonProps}
 				className='hidden dark:inline-block'
-				src='/github-mark-white.svg'
+				src='/assets/github-mark-white.svg'
 			/>
 			<IconLink
 				{...commonProps}
 				className='inline-block dark:hidden'
-				src='/github-mark.svg'
+				src='/assets/github-mark.svg'
 			/>
 		</div>
 	);

@@ -34,7 +34,7 @@ const getProject = async <T extends Project>(
 ): Promise<T> => {
 	const data = await htmlFromMd<T>([lang, type, name]);
 	if (type === ProjectType.SITE)
-		(data.meta as SiteMetaData).img ||= `/${name}/index.jpg`;
+		(data.meta as SiteMetaData).img ||= `/assets/${name}/index.jpg`;
 	return data;
 };
 
