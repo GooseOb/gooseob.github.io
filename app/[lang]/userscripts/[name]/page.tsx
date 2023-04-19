@@ -5,6 +5,11 @@ import Content from '@/app/components/Content';
 import GithubIcon from '@/app/components/GithubIcon';
 export { generateStaticUserscriptParams as generateStaticParams } from '@/lib/projectPage';
 
+// export const generateStaticParams = () => [
+// 	{ slug: 'svajksta-free' },
+// 	{ slug: 'yt-defaulter' }
+// ];
+
 const UserscriptPage: ProjectPage = ({ params }) => {
 	const { meta, content } = useUserscript(params.name, params.lang);
 	return (

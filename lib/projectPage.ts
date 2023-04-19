@@ -6,7 +6,7 @@ const getStaticProjectParamsGenerator =
 	(getProjects: ProjectGetter) =>
 	async ({ params }: { params: AppParams }) => {
 		const sites = await getProjects(params.lang);
-		return sites.map((name) => ({ params: { name } }));
+		return sites.map((name) => ({ name }));
 	};
 
 export const generateStaticSiteParams =
