@@ -65,6 +65,7 @@ export const htmlFromMd = async <T extends DataFromMd>(
 	) as T['meta'];
 
 	const fileContent = await readFile(pathName, 'utf-8');
+
 	const { data, content } = matter(fileContent);
 
 	const resolvedContent = resolveCustomFunctions(

@@ -1,9 +1,7 @@
 import { NextPage } from 'next';
 import AppLayout from '@/app/components/AppLayout';
 import Home from '@/app/[lang]/page';
-import { AppParams } from '@/app/[lang]/layout';
-
-const defaultParams: AppParams = { lang: 'en' };
+import defaultParams from '@/lib/defaultParams';
 
 const RootHome: NextPage = () => {
 	return (

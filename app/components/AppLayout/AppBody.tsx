@@ -7,11 +7,10 @@ import Footer from './Footer';
 
 type Props = {
 	children: ReactNode;
-	params?: AppParams;
+	params: AppParams;
 };
 
-const AppBody: FC<Props> = ({ children, params }) => {
-	const lang = params ? params.lang : 'en';
+const AppBody: FC<Props> = ({ children, params: { lang } }) => {
 	const homeHref = `/${lang}/`;
 
 	const sections = useProjects(lang);
