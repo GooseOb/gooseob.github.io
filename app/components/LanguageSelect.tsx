@@ -12,7 +12,8 @@ const LanguageSelect: FC<Props> = ({ value }) => {
 	const pathname = usePathname();
 
 	const onChange = (e: ChangeEvent<HTMLSelectElement>) => {
-		const newPath = `/${e.target.value}/${pathname.replace(/^\/..\//, '')}`;
+		const newPath =
+			`/${e.target.value}/` + (pathname ? pathname.replace(/^\/..\//, '') : '');
 		router.replace(newPath);
 	};
 

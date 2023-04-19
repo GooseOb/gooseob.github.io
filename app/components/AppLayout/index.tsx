@@ -8,7 +8,7 @@ type Props = {
 	children: ReactNode;
 };
 
-const Index: FC<Props> = ({ params, children }) => {
+const AppLayout: FC<Props> = ({ params, children }) => {
 	return (
 		<html lang={params.lang}>
 			<AppHead />
@@ -17,4 +17,4 @@ const Index: FC<Props> = ({ params, children }) => {
 	);
 };
 
-export default Index;
+export default AppLayout;
