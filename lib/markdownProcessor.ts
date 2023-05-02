@@ -3,11 +3,12 @@ import html from 'remark-html';
 import { readFile } from 'fs/promises';
 import matter from 'gray-matter';
 import path from 'path';
-import { replaceAsync } from '@/lib/util';
 import filesMeta from '@/content/index.json';
 import dict from '@/content/dict.json';
 import { Lang } from '@/lib/lang';
+import { replaceAsync } from '@/lib/util';
 import { replaceKeywordsByIcons } from '@/lib/replaceKeywordsByIcons';
+import { fixApostrophes } from '@/lib/fixApostrophes';
 
 export type DataFromMd<
 	TMeta extends Record<string, any> = Record<string, any>
@@ -68,8 +69,11 @@ export const htmlFromMd = async <T extends DataFromMd>(
 
 	const { data, content } = matter(fileContent);
 
-	const resolvedContent = resolveCustomFunctions(
-		resolveAlias(await resolveImports(content, pathName), pathArr[1]),
+	const resolvedContent = fixApostrophes(
+		resolveCustomFunctions(
+			resolveAlias(await resolveImports(content, pathName), pathArr[1]),
+			lang
+		),
 		lang
 	);
 

@@ -1,5 +1,5 @@
-export type ArrayElement<ArrayType extends readonly unknown[]> =
-	ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
+export type ArrayElement<TArray extends readonly unknown[]> =
+	TArray extends readonly (infer TElement)[] ? TElement : never;
 
 export const replaceAsync = async (
 	str: string,
