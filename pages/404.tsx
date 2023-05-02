@@ -1,8 +1,8 @@
+import '@/app/globals.css';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Head from 'next/head';
-import '@/app/globals.css';
 import Favicons from '@/app/components/AppLayout/AppHead/Favicons';
 
 const NotFound: NextPage = () => {

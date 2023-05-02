@@ -5,7 +5,7 @@ const Index: FC = () => {
 	return (
 		<head>
 			<Favicons />
-			<title>GooseOb’s pages</title>
+			<title>GooseObʼs pages</title>
 		</head>
 	);
 };

@@ -15,9 +15,7 @@
 }
 
 a {
-	@apply text-link-light dark:text-link-dark;
-	font-weight: bold;
-	transition: 0.2s;
+	@apply text-link-light dark:text-link-dark font-bold transition-colors;
 }
 
 a:hover {
@@ -29,24 +27,23 @@ a:hover {
 }
 
 select {
-	cursor: pointer;
+	@apply cursor-pointer;
 }
 
 ::-webkit-scrollbar {
-	width: 10px;
+	@apply w-[10px];
 }
 
 ::-webkit-scrollbar-track {
-	background: #fff3;
+	@apply bg-[#fff3];
 }
 
 ::-webkit-scrollbar-thumb {
-	border-radius: 1rem;
-	background: #fff4;
+	@apply bg-[#fff4] rounded-2xl;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #fff6;
+	@apply bg-[#fff6];
 }
 
 .object-position-animation:hover {
@@ -64,29 +61,7 @@ select {
 
 .content-from-markdown {
 	p {
-		@apply my-3;
-	}
-	h3,
-	h4 {
-		@apply font-bold text-center;
-	}
-	h3 {
-		@apply text-3xl;
-	}
-	h4 {
-		@apply text-xl;
-	}
-	li {
-		@apply list-disc ml-5;
-	}
-	img {
-		@apply mx-auto my-3 md:max-w-[80%];
-	}
-}
-
-.home-content-from-markdown {
-	p {
-		@apply my-3 text-xl;
+		@apply text-xl my-3;
 	}
 	h2,
 	h3,
@@ -102,8 +77,20 @@ select {
 	h4 {
 		@apply text-2xl;
 	}
+	li {
+		@apply text-xl list-disc ml-5;
+	}
 	img {
-		min-height: 1.5em;
+		@apply m-0 mx-auto my-3 md:max-w-[80%];
+	}
+	.tech-label {
+		@apply inline m-0 min-h-[1.1em];
+	}
+}
+
+.content-from-markdown-home {
+	.tech-label {
+		@apply min-h-[1.5em];
 	}
 }
 
@@ -112,7 +99,6 @@ select {
 		@apply flex flex-col gap-3;
 	}
 	img {
-		display: inline;
-		min-height: 1.5em;
+		@apply inline min-h-[1.5em];
 	}
 }

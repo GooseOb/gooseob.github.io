@@ -24,12 +24,16 @@ GULP
 **@dict(tools)**
 @style(margin-top: 1em)
 
-GitHub Git WebStorm VSCode
+GitHub Git
+
+WebStorm VSCode
 
 **@dict(also-worked)**
 @style(margin-top: 1em)
 
-Bash PHP Markdown
+Bash PHP
+
+Markdown
 
 #### 📊@dict(stats)
 @style(margin-top: 1em)

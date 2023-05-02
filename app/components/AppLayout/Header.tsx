@@ -34,7 +34,7 @@ const Header: FC<Props> = ({ homeHref, lang }) => {
 						<polyline className='cls-3' points='16.5 22 5 20 14.5 12.5' />
 						<circle style={{ fill: 'black' }} cx='21' cy='10' r='2' />
 					</svg>
-					<span>GooseOb’s pages</span>
+					<span>GooseObʼs pages</span>
 				</Link>
 			</h1>
 			<LanguageSelect value={lang} />

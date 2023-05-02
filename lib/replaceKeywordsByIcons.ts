@@ -13,7 +13,7 @@ export const replaceKeywordsByIcons = (text: string) =>
 		($0) =>
 			`<img src='${
 				icons[$0 as keyof typeof icons]
-			}' alt='${$0}' style='display: inline'>`
+			}' alt='${$0}' class='tech-label'>`
 	);
 
 export const replaceStackKeywordsByIcons = (text: string) =>

@@ -12,7 +12,7 @@ const Home: NextPage<Props> = ({ params }) => {
 	const { content, meta } = useHome(params.lang);
 	return (
 		<>
-			<Content markdownStyleClassName='home-content-from-markdown'>
+			<Content markdownStyleClassName='content-from-markdown-home'>
 				{content}
 			</Content>
 			<ProjectStack>{meta.stack}</ProjectStack>

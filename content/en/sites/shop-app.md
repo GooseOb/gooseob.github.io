@@ -1,7 +1,7 @@
 ### Features
 
 We can search the products by name, category and price.
-There is the login button, we don’t have to input any data, just
+There is the login button, we donʼt have to input any data, just
 click the "LOG IN" in popup. After this we can make orders by clicking
 the plus button on a product card. Or we can click "SHOW MORE" and input
 amount of this product we want to order.

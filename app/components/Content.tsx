@@ -5,13 +5,12 @@ type Props = {
 	markdownStyleClassName?: string;
 };
 
-const Content: FC<Props> = ({
-	children,
-	markdownStyleClassName = 'content-from-markdown'
-}) => {
+const Content: FC<Props> = ({ children, markdownStyleClassName = '' }) => {
 	return (
 		<div
-			className={'my-3 md:mx-20 ' + markdownStyleClassName}
+			className={
+				'my-3 md:mx-20 content-from-markdown ' + markdownStyleClassName
+			}
 			dangerouslySetInnerHTML={{ __html: children }}
 		/>
 	);

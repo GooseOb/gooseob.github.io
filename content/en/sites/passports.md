@@ -9,7 +9,7 @@ if the state of current passport differs from the state of previous one.
 Flipping pages is available by clicking arrow buttons, clicking pages
 and pressing arrow buttons on keyboard.
 
-There is the qr-code, it’s available to scan, or we can
+There is the qr-code, itʼs available to scan, or we can
 just click it to copy url.
 
 ### History
@@ -30,7 +30,7 @@ Initially I was just copying the sample of passport and then moving data
 from the sheet of the form results to the passport sheet (one sheet per passport)
 like I did in Photoshop but faster. Then I wanted to even more decrease
 time of issuing passports, so I began using macros and found out that
-it’s creating scripts based on my actions. It interested me and I started
+itʼs creating scripts based on my actions. It interested me and I started
 to learn about google apps scripts and then about JavaScript. I created the script
 doing all my job for me, it was even making requests to API of social network VK
 to get the id of the user. Later it also started to send messages with a link
@@ -50,10 +50,10 @@ I just fill an appropriate cell with
 - -1 - annulled
 
 Now, we have a website that makes request to the Google Spreadsheet
-(cache service in fact, it’s updated when new passport is added)
+(cache service in fact, itʼs updated when new passport is added)
 for a data and visualize it. Making request to my google service for each passport
 would take too much time, so It requests all the passports.
-If it contained a big amount of passport, I’d probably stop using google services.
+If it contained a big amount of passport, Iʼd probably stop using google services.
 
 Frontend was created in vanilla js with GULP but 2 years later
 I decided to rewrite the project in TypeScript, so replaced GULP by Vite.

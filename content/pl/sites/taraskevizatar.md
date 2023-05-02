@@ -55,6 +55,6 @@ mogliśmy używać plików stamtąd w obu naszych projektach.
 
 Wtedy pomyślałem, że zrobię możliwość budowania
 frontendu taraszkievizatoru, który współdziała z tym API.
-Dodałem alias @api dla importu i jeśli build jest w trybie api,
-@api importuje funkcję fetch zamiast funkcji z logiką taraszkievizacji
+Dodałem alias `@api` dla importu i jeśli build jest w trybie api,
+`@api` importuje funkcję fetch zamiast funkcji z logiką taraszkievizacji
 na frontend.

@@ -1,4 +1,4 @@
-This script allows to change default settings with which a video opens.
+#### This script allows to change default settings with which a video opens.
 
 We can set speed, quality and enabling subtitles
 globally or specialize for each channel, set opening videos in a new tab,

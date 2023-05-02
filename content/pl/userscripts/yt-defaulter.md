@@ -1,4 +1,4 @@
-Ten skrypt umożliwia zmianę domyślnych ustawień, z którymi się odtworzają filmiki.
+#### Ten skrypt umożliwia zmianę domyślnych ustawień, z którymi się otwierają filmiki.
 
 Możemy ustawić prędkość, jakość i autowłączenie napisów
 globalnie lub specjalizować dla każdego kanału, ustawić otwarzanie filmików w nowej kartce,
