@@ -11,8 +11,9 @@ page. If there is no stack, the project's written only on JavaScript.
 My real name is Edvin Dulko. Now I'm a computer science student of the
 University of Lodz.
 
-At june I'll be 18yo, and it's the last month of an academic year, so I can
-start working at july (or right now but in this case not full-time).
+I can start working right now but not full-time.
+June is the last month of an academic year
+(and it's the month I'll be 18yo), so since july I can work full-time.
 
 Languages I can speak:
 - Polish

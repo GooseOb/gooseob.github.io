@@ -11,8 +11,9 @@ Jeśli nie ma stosu, to znaczy, że projekt jest napisany tylko na JavaScript.
 Nazywam się Edvin Dulko. Obecnie studiuję informatykę na
 Uniwersytecie Łódzkim.
 
-W czerwcu będę miał 18 lat i jest to ostatni miesiąc roku akademickiego,
-więc mogę zacząć pracować w lipcu (lub teraz, ale nie na pełny etat).
+Mogę zacząć pracę od zaraz, ale nie na pełny etat.
+Czerwiec jest ostatnim miesiącem roku akademickiego
+(i jest to miesiąc, w którym skończę 18 lat), więc od lipca mogę pracować na pełen etat.
 
 Języki, którymi mogę się posługiwać:
 - Polski
