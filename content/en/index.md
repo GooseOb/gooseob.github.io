@@ -2,7 +2,7 @@
 ### A Frontend developer
 
 The list of my projects is on the sidebar (or above if you're using phone),
-there are a link to the github repo and a technology stack of the project on each
+there are the link to the github repo and the technology stack of a project on each
 page. If there is no stack, the project's written only on JavaScript.
 
 #### 😍If you want to hire me
