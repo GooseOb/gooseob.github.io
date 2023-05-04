@@ -1,6 +1,6 @@
 {
 	"en": {
-		"stack": "Technology stack",
+		"technologies": "Technologies",
 		"styles": "Styles",
 		"builders": "Builders",
 		"tools": "Tools",
@@ -8,7 +8,7 @@
 		"stats": "Stats"
 	},
 	"be": {
-		"stack": "Тэхналягічны стэк",
+		"technologies": "Тэхналёгіі",
 		"styles": "Стылі",
 		"builders": "Зборшчыкі",
 		"tools": "Інструмэнты",
@@ -16,7 +16,7 @@
 		"stats": "Статыстыка"
 	},
 	"pl": {
-		"stack": "Stos technologiczny",
+		"technologies": "Technologie",
 		"styles": "Style",
 		"builders": "Buildery",
 		"tools": "Narzędzia",

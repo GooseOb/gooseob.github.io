@@ -1,4 +1,4 @@
-#### 📚@dict(stack)
+#### 📚@dict(technologies)
 @style(margin-top: 1em)
 
 JavaScript TypeScript HTML5
