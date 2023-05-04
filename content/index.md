@@ -5,7 +5,7 @@ JavaScript TypeScript HTML5
 
 NodeJS
 
-React Redux Next.js
+React Redux Redux Toolkit Next.js
 
 **@dict(styles)**
 @style(margin-top: 1em)
