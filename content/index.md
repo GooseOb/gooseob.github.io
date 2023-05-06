@@ -3,9 +3,9 @@
 
 JavaScript TypeScript HTML5
 
-NodeJS
-
 React Redux Redux Toolkit Next.js
+
+NodeJS
 
 **@dict(styles)**
 @style(margin-top: 1em)
@@ -23,6 +23,8 @@ GULP
 
 **@dict(tools)**
 @style(margin-top: 1em)
+
+ESLint Prettier
 
 GitHub Git
 

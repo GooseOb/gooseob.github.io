@@ -1,0 +1,39 @@
+{
+	"JavaScript": "JavaScript-%23FFCE5A?logo=javascript&logoColor=000000",
+	"TypeScript": "TypeScript-007ACC?logo=typescript&logoColor=white",
+	"HTML5": "HTML5-%23E44D27?logo=html5&logoColor=white",
+
+	"NodeJS": "NodeJS-white?logo=Node.JS",
+
+	"React": "React-1d3c6e?logo=react&logoColor=white",
+	"Redux Toolkit": "Redux_Toolkit-764ABC?logo=redux&logoColor=white",
+	"Redux": "Redux-764ABC?logo=redux&logoColor=white",
+	"Next.js": "Next.js-%231a202c?logo=next.js",
+
+	"CSS3": "CSS3-%231572B6?logo=css3",
+	"SASS": "SASS-c69?logo=sass&logoColor=white",
+	"PostCSS": "PostCSS-DD3A0A?logo=postcss&logoColor=white",
+
+	"TailwindCSS": "TailwindCSS-%231a202c?logo=tailwind-css",
+	"MaterialUI": "MaterialUI-%231a202c?logo=mui",
+
+	"Webpack": "Webpack-%231a202c?logo=webpack",
+	"Vite": "Vite-%231a202c?logo=vite",
+
+	"GULP": "GULP-CF4647?logo=gulp&logoColor=white",
+
+	"ESLint": "ESLint-purple?logo=Eslint&logoColor=white",
+	"Prettier": "Prettier-black?logo=Prettier&logoColor=white",
+
+	"GitHub": "GitHub-black?logo=github",
+	"Git": "Git-black?logo=git",
+
+	"WebStorm": "WebStorm-black?logo=webstorm",
+	"VSCode": "VSCode-10102b?logo=visualstudiocode",
+
+	"Bash": "Bash-%231a202c?logo=gnubash",
+	"PHP": "PHP-777BB4?logo=php&logoColor=white",
+	"Markdown": "Markdown-%231a202c?logo=markdown",
+
+	"Photoshop": "Photoshop-31A8FF?logo=adobephotoshop&logoColor=black"
+}

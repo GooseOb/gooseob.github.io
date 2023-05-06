@@ -12,7 +12,7 @@ import {
 	Replacer,
 	AsyncReplacer
 } from '@/lib/util';
-import { replaceKeywordsByIcons } from '@/lib/replaceKeywordsByIcons';
+import { replaceKeywordsByBadges } from '@/lib/replaceKeywordsByBadges';
 import { fixApostrophes } from '@/lib/fixApostrophes';
 
 export type DataFromMd<
@@ -63,7 +63,7 @@ const makeImagesLazy: Replacer = (text) =>
 const preprocess = composeReplacers([resolveCustomFunctions, fixApostrophes]);
 const postprocess = composeReplacers([
 	processExtendedSyntax,
-	replaceKeywordsByIcons,
+	replaceKeywordsByBadges,
 	makeImagesLazy
 ]);
 

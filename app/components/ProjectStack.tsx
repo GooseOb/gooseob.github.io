@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { replaceStackKeywordsByIcons } from '@/lib/replaceKeywordsByIcons';
+import { replaceStackKeywordsByBadges } from '@/lib/replaceKeywordsByBadges';
 
 type Props = {
 	children: string;
@@ -14,7 +14,7 @@ const ProjectStack: FC<Props> = ({ children }) => {
 			<div
 				className='project-stack'
 				dangerouslySetInnerHTML={{
-					__html: replaceStackKeywordsByIcons(children)
+					__html: replaceStackKeywordsByBadges(children)
 				}}
 			/>
 		</div>
