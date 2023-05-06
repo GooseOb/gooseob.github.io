@@ -6,7 +6,12 @@ import path from 'path';
 import filesMeta from '@/content/index.json';
 import dict from '@/content/dict.json';
 import { Lang } from '@/lib/lang';
-import { replaceAsync } from '@/lib/util';
+import {
+	replaceAsync,
+	composeReplacers,
+	Replacer,
+	AsyncReplacer
+} from '@/lib/util';
 import { replaceKeywordsByIcons } from '@/lib/replaceKeywordsByIcons';
 import { fixApostrophes } from '@/lib/fixApostrophes';
 
@@ -17,7 +22,7 @@ export type DataFromMd<
 	content: string;
 };
 
-const resolveImports = (content: string, pathName: string) =>
+const resolveImports: AsyncReplacer<[string]> = (content, pathName) =>
 	replaceAsync(
 		content,
 		/\[@include]\((.*?)\)/g,
@@ -32,16 +37,16 @@ const resolveImportsHelper = async (pathName: string): Promise<string> => {
 	return await resolveImports(content, pathName);
 };
 
-const resolveAlias = (text: string, pathName: string) =>
+const resolveAlias: Replacer<[string]> = (text, pathName) =>
 	text.replace(/]\(@(?=\/)/g, '](/assets/' + pathName);
 
-const resolveCustomFunctions = (text: string, lang: Lang) =>
+const resolveCustomFunctions: Replacer<[Lang]> = (text, lang) =>
 	text.replace(
 		/@dict\((.*?)\)/g,
 		($0, $1: keyof typeof dict.en) => dict[lang][$1]
 	);
 
-const processExtendedSyntax = (text: string) =>
+const processExtendedSyntax: Replacer = (text) =>
 	text
 		.replace(
 			/(>.*?>\s)<p>@style\((.*?)\)<\/p>/g,
@@ -51,6 +56,16 @@ const processExtendedSyntax = (text: string) =>
 			/(>.*?>\s*?)@style\((.*?)\)/g,
 			($0, $1, $2) => ` style="${$2}"${$1}`
 		);
+
+const makeImagesLazy: Replacer = (text) =>
+	text.replace(/<img/g, '<img loading="lazy" decoding="async"');
+
+const preprocess = composeReplacers([resolveCustomFunctions, fixApostrophes]);
+const postprocess = composeReplacers([
+	processExtendedSyntax,
+	replaceKeywordsByIcons,
+	makeImagesLazy
+]);
 
 const remarkProcessor = remark().use(html);
 export const htmlFromMd = async <T extends DataFromMd>(
@@ -69,11 +84,8 @@ export const htmlFromMd = async <T extends DataFromMd>(
 
 	const { data, content } = matter(fileContent);
 
-	const resolvedContent = fixApostrophes(
-		resolveCustomFunctions(
-			resolveAlias(await resolveImports(content, pathName), pathArr[1]),
-			lang
-		),
+	const resolvedContent = preprocess(
+		resolveAlias(await resolveImports(content, pathName), pathArr[1]),
 		lang
 	);
 
@@ -81,8 +93,6 @@ export const htmlFromMd = async <T extends DataFromMd>(
 
 	return {
 		meta: Object.assign(meta, data),
-		content: replaceKeywordsByIcons(
-			processExtendedSyntax(processedContent.toString())
-		)
+		content: postprocess(processedContent.toString())
 	} as T;
 };

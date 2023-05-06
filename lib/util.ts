@@ -1,6 +1,22 @@
 export type ArrayElement<TArray extends readonly unknown[]> =
 	TArray extends readonly (infer TElement)[] ? TElement : never;
 
+export type Promisify<T> = T extends (...args: infer TArgs) => infer TReturn
+	? (...args: TArgs) => Promise<TReturn>
+	: never;
+
+export type Replacer<TArgs extends any[] = never> = (
+	text: string,
+	...args: TArgs
+) => string;
+
+export type AsyncReplacer<TArgs extends any[]> = Promisify<Replacer<TArgs>>;
+
+export const composeReplacers =
+	<TArgs extends any[]>(replacers: Replacer<TArgs>[]): Replacer<TArgs> =>
+	(text, ...args) =>
+		replacers.reduce((acc, replace) => replace(acc, ...args), text);
+
 export const replaceAsync = async (
 	str: string,
 	regex: RegExp,

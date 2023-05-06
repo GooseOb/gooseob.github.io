@@ -1,13 +1,14 @@
 import icons from '@/content/icons.json';
+import { Replacer } from '@/lib/util';
 
 const keywordsRegex = new RegExp(`(${Object.keys(icons).join('|')})`, 'g');
 
-const groupBy = (separator: string, text: string) =>
+const groupBy: Replacer<[string]> = (text, separator) =>
 	`<div>${text.split(separator).join('</div><div>')}</div>`;
 
-const group = (text: string) => groupBy(';', groupBy(',', text));
+const group: Replacer = (text) => groupBy(groupBy(text, ','), ';');
 
-export const replaceKeywordsByIcons = (text: string) =>
+export const replaceKeywordsByIcons: Replacer = (text) =>
 	text.replace(
 		keywordsRegex,
 		($0) =>
@@ -16,5 +17,5 @@ export const replaceKeywordsByIcons = (text: string) =>
 			}' alt='${$0}' class='tech-label'>`
 	);
 
-export const replaceStackKeywordsByIcons = (text: string) =>
+export const replaceStackKeywordsByIcons: Replacer = (text) =>
 	replaceKeywordsByIcons(group(text));
