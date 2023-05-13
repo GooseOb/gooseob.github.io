@@ -4,8 +4,12 @@ import projectIndex from '../content/index.json';
 const getProjectsByType = (type: ProjectType) =>
 	Object.keys(projectIndex[type]);
 
-export const getSites = () => getProjectsByType(ProjectType.SITE);
-export const getUserscripts = () => getProjectsByType(ProjectType.USERSCRIPT);
+export type ProjectNamesGetter = () => string[];
+
+export const getSites: ProjectNamesGetter = () =>
+	getProjectsByType(ProjectType.SITE);
+export const getUserscripts: ProjectNamesGetter = () =>
+	getProjectsByType(ProjectType.USERSCRIPT);
 
 export type ProjectsData = {
 	type: ProjectType;

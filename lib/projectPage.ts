@@ -1,13 +1,14 @@
 import { AppParams } from '@/app/[lang]/layout';
-import { getSites, getUserscripts, ProjectGetter } from '@/lib/projectNames';
+import {
+	getSites,
+	getUserscripts,
+	ProjectNamesGetter
+} from '@/lib/projectNames';
 import { NextPage } from 'next';
 
 const getStaticProjectParamsGenerator =
-	(getProjects: ProjectGetter) =>
-	async ({ params }: { params: AppParams }) => {
-		const sites = await getProjects(params.lang);
-		return sites.map((name) => ({ name }));
-	};
+	(getProjects: ProjectNamesGetter) => () =>
+		getProjects().map((name) => ({ name }));
 
 export const generateStaticSiteParams =
 	getStaticProjectParamsGenerator(getSites);
