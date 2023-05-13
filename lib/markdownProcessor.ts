@@ -1,6 +1,6 @@
 import { remark } from 'remark';
 import html from 'remark-html';
-import { readFile } from 'fs/promises';
+import { readFile, stat } from 'fs/promises';
 import matter from 'gray-matter';
 import path from 'path';
 import filesMeta from '@/content/index.json';
@@ -14,10 +14,9 @@ import {
 } from '@/lib/util';
 import { replaceKeywordsByBadges } from '@/lib/replaceKeywordsByBadges';
 import { fixApostrophes } from '@/lib/fixApostrophes';
+import { ProjectMetaData } from '@/lib/projects';
 
-export type DataFromMd<
-	TMeta extends Record<string, any> = Record<string, any>
-> = {
+export type DataFromMd<TMeta extends ProjectMetaData> = {
 	meta: TMeta;
 	content: string;
 };
@@ -67,10 +66,17 @@ const postprocess = composeReplacers([
 	makeImagesLazy
 ]);
 
+export type ModifiedMetaData<T> = T & {
+	lastModified: number;
+};
+type ProcessReturnType<TMeta extends ProjectMetaData> = DataFromMd<
+	ModifiedMetaData<TMeta>
+>;
+
 const remarkProcessor = remark().use(html);
-export const htmlFromMd = async <T extends DataFromMd>(
-	pathArr: string[]
-): Promise<T> => {
+export const htmlFromMd = async <TMeta extends ProjectMetaData>(
+	pathArr: [Lang, ...string[]]
+): Promise<ProcessReturnType<TMeta>> => {
 	const pathName = `content/${pathArr.join('/')}.md`;
 
 	const lang = pathArr.shift() as Lang;
@@ -78,9 +84,14 @@ export const htmlFromMd = async <T extends DataFromMd>(
 	const meta = pathArr.reduce<Record<string, any>>(
 		(acc, pathItem) => acc[pathItem as keyof typeof acc],
 		filesMeta
-	) as T['meta'];
+	) as ModifiedMetaData<TMeta>;
 
-	const fileContent = await readFile(pathName, 'utf-8');
+	const [fileContent, { mtime }] = await Promise.all([
+		readFile(pathName, 'utf-8'),
+		stat(pathName)
+	]);
+
+	meta.lastModified = mtime.getTime();
 
 	const { data, content } = matter(fileContent);
 
@@ -94,5 +105,5 @@ export const htmlFromMd = async <T extends DataFromMd>(
 	return {
 		meta: Object.assign(meta, data),
 		content: postprocess(processedContent.toString())
-	} as T;
+	} as ProcessReturnType<TMeta>;
 };

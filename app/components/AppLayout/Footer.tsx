@@ -1,10 +1,8 @@
 import { FC } from 'react';
 
-type Props = {
-	email: string;
-};
+const EMAIL = 'edvin.dulko1@gmail.com';
 
-const Footer: FC<Props> = ({ email }) => {
+const Footer: FC = () => {
 	return (
 		<footer className='p-1 col-span-2 m-auto text-white links-color-dark'>
 			<ul className='[&>li]:inline-block [&>li]:ml-2 text-center'>
@@ -13,7 +11,7 @@ const Footer: FC<Props> = ({ email }) => {
 					<a href='https://t.me/GooseOb'>telergram</a>
 				</li>
 				<li>
-					<a href={'mailto:' + email}>{email}</a>
+					<a href={'mailto:' + EMAIL}>{EMAIL}</a>
 				</li>
 				<li>
 					<a href='https://github.com/GooseOb'>github</a>

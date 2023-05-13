@@ -1,31 +1,26 @@
-import { readdir } from 'fs/promises';
-import { use } from 'react';
-import { Lang } from '@/lib/lang';
+import { ProjectType } from '@/lib/projects';
+import projectIndex from '../content/index.json';
 
-const getFileNamesIn = async (dir: string) =>
-	(await readdir('./content/' + dir)).map((fileName) =>
-		fileName.replace(/\.md/, '')
-	);
+const getProjectsByType = (type: ProjectType) =>
+	Object.keys(projectIndex[type]);
 
-export type ProjectGetter = (lang: Lang) => ReturnType<typeof getFileNamesIn>;
+export const getSites = () => getProjectsByType(ProjectType.SITE);
+export const getUserscripts = () => getProjectsByType(ProjectType.USERSCRIPT);
 
-export const getSites: ProjectGetter = (lang) =>
-	getFileNamesIn(lang + '/sites');
-export const getUserscripts: ProjectGetter = (lang) =>
-	getFileNamesIn(lang + '/userscripts');
-
-type ProjectsData = {
-	name: string;
+export type ProjectsData = {
+	type: ProjectType;
 	list: string[];
 };
 
-export const useProjects = (lang: Lang): ProjectsData[] => [
-	{
-		name: 'sites',
-		list: use(getSites(lang))
-	},
-	{
-		name: 'userscripts',
-		list: use(getUserscripts(lang))
-	}
-];
+export const getProjectSections = (): ProjectsData[] => {
+	const projectTypes = Object.keys(projectIndex).filter(
+		(key) => key !== 'index'
+	) as ProjectType[];
+	const result: ProjectsData[] = [];
+	for (const type of projectTypes)
+		result.push({
+			type,
+			list: getProjectsByType(type)
+		});
+	return result;
+};

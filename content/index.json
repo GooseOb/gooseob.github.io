@@ -1,5 +1,9 @@
 {
 	"index": {
+		"name": "home",
+		"type": "pet",
+		"repo": "https://github.com/GooseOb/gooseob.github.io",
+		"url": "https://gooseob.github.io/",
 		"stack": "TypeScript, Next.js (appDir), TailwindCSS"
 	},
 	"sites": {

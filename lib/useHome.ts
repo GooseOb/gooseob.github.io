@@ -1,12 +1,7 @@
 import { use } from 'react';
-import { DataFromMd, htmlFromMd } from '@/lib/markdownProcessor';
+import { htmlFromMd } from '@/lib/markdownProcessor';
 import { Lang } from '@/lib/lang';
+import { SiteMetaData } from '@/lib/projects';
 
-type HomeMetaData = {
-	stack: string;
-};
-
-const useHome = (lang: Lang) =>
-	use(htmlFromMd<DataFromMd<HomeMetaData>>([lang, 'index']));
-
-export default useHome;
+export const useHome = (lang: Lang) =>
+	use(htmlFromMd<SiteMetaData>([lang, 'index']));

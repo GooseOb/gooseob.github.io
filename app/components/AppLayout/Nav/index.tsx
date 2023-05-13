@@ -1,27 +1,24 @@
-import React, { FC } from 'react';
 import Details from './Details';
 import { Lang } from '@/lib/lang';
-
-type Section = {
-	name: string;
-	list: string[];
-};
+import { getProjectSections } from '@/lib/projectNames';
+import { FC } from 'react';
 
 type Props = {
 	lang: Lang;
-	sections: Section[];
 };
 
-const Index: FC<Props> = ({ lang, sections }) => {
+const Nav: FC<Props> = ({ lang }) => {
+	const sections = getProjectSections();
+
 	return (
 		<nav className='bg-secondary-light dark:bg-secondary-dark col-span-2 md:col-span-1'>
 			<ul>
-				{sections.map(({ name, list }) => (
+				{sections.map(({ type, list }) => (
 					<Details
-						summary={name}
-						path={`/${lang}/${name}/`}
+						summary={type}
+						path={`/${lang}/${type}/`}
 						list={list}
-						key={name}
+						key={type}
 					/>
 				))}
 			</ul>
@@ -29,4 +26,4 @@ const Index: FC<Props> = ({ lang, sections }) => {
 	);
 };
 
-export default Index;
+export default Nav;
