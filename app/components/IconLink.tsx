@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import internal from 'stream';
 
 type IconLinkProps = {
 	href: string;

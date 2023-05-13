@@ -43,7 +43,8 @@
 		"yt-defaulter": {
 			"name": "YT-Defaulter",
 			"repo": "https://github.com/GooseOb/YT-Defaulter",
-			"url": "https://greasyfork.org/en/scripts/454696-youtube-defaulter"
+			"url": "https://greasyfork.org/en/scripts/454696-youtube-defaulter",
+			"stack": "JavaScript -> TypeScript"
 		}
 	}
 }

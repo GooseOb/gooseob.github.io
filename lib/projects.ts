@@ -1,6 +1,6 @@
 import { use } from 'react';
 import { Lang } from '@/lib/lang';
-import { htmlFromMd, ModifiedMetaData } from '@/lib/markdownProcessor';
+import { htmlFromMd, ModifiedMetaDataOfType } from '@/lib/markdownProcessor';
 
 export type ProjectMetaData = {
 	name: string;
@@ -8,6 +8,7 @@ export type ProjectMetaData = {
 };
 
 export type UserscriptMetaData = ProjectMetaData & {
+	stack?: string;
 	url?: string;
 };
 
@@ -23,7 +24,7 @@ export const enum ProjectType {
 	USERSCRIPT = 'userscripts'
 }
 
-type Meta<T extends ProjectType> = T extends ProjectType.SITE
+export type Meta<T extends ProjectType> = T extends ProjectType.SITE
 	? SiteMetaData
 	: UserscriptMetaData;
 
@@ -32,10 +33,10 @@ const getProject = async <TType extends ProjectType>(
 	name: string,
 	lang: Lang
 ) => {
-	const data = await htmlFromMd<Meta<TType>>([lang, type, name]);
+	const data = await htmlFromMd([lang, type, name]);
 	if (type === ProjectType.SITE)
 		(
-			data.meta as ModifiedMetaData<SiteMetaData>
+			data.meta as ModifiedMetaDataOfType<ProjectType.SITE>
 		).img ||= `/assets/${name}/index.jpg`;
 	return data;
 };
@@ -46,6 +47,9 @@ const getUserscript = (name: string, lang: Lang) =>
 const getSite = (name: string, lang: Lang) =>
 	getProject(ProjectType.SITE, name, lang);
 
+const getHome = (lang: Lang) => htmlFromMd<ProjectType.SITE>([lang, 'index']);
+
 export const useSite = (name: string, lang: Lang) => use(getSite(name, lang));
 export const useUserscript = (name: string, lang: Lang) =>
 	use(getUserscript(name, lang));
+export const useHome = (lang: Lang) => use(getHome(lang));

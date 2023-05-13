@@ -30,7 +30,7 @@ GitHub Git
 
 WebStorm VSCode
 
-**@dict(also-worked)**
+**@dict(alsoWorked)**
 @style(margin-top: 1em)
 
 Bash PHP

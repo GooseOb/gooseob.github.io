@@ -3,6 +3,8 @@ import { useUserscript } from '@/lib/projects';
 import IconLink from '@/app/components/IconLink';
 import Content from '@/app/components/Content';
 import GithubIcon from '@/app/components/GithubIcon';
+import LastUpdate from '@/app/components/LastUpdate';
+import ProjectStack from '@/app/components/ProjectStack';
 export { generateStaticUserscriptParams as generateStaticParams } from '@/lib/projectPage';
 
 const UserscriptPage: ProjectPage = ({ params }) => {
@@ -21,6 +23,8 @@ const UserscriptPage: ProjectPage = ({ params }) => {
 				<GithubIcon repo={meta.repo} />
 			</div>
 			<Content>{content}</Content>
+			<LastUpdate lang={params.lang} date={meta.lastModified} />
+			{meta.stack && <ProjectStack>{meta.stack}</ProjectStack>}
 		</div>
 	);
 };

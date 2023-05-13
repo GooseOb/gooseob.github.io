@@ -5,9 +5,11 @@ import Content from '@/app/components/Content';
 import ProjectStack from '@/app/components/ProjectStack';
 import GithubIcon from '@/app/components/GithubIcon';
 export { generateStaticSiteParams as generateStaticParams } from '@/lib/projectPage';
+import LastUpdate from '@/app/components/LastUpdate';
 
 const SitePage: ProjectPage = ({ params }) => {
 	const { meta, content } = useSite(params.name, params.lang);
+
 	return (
 		<div>
 			<div className='relative'>
@@ -26,6 +28,7 @@ const SitePage: ProjectPage = ({ params }) => {
 				/>
 			</div>
 			<Content>{content}</Content>
+			<LastUpdate lang={params.lang} date={meta.lastModified} />
 			<ProjectStack>{meta.stack}</ProjectStack>
 		</div>
 	);

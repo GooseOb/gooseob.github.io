@@ -3,6 +3,7 @@ import { AppParams } from '@/app/[lang]/layout';
 import Header from './Header';
 import Nav from './Nav';
 import Footer from './Footer';
+import { Lang } from '@/lib/lang';
 
 type Props = {
 	children: ReactNode;
@@ -10,7 +11,7 @@ type Props = {
 };
 
 const AppBody: FC<Props> = ({ children, params: { lang } }) => {
-	const homeHref = `/${lang}/`;
+	const homeHref: `/${Lang}/` = `/${lang}/`;
 
 	return (
 		<body className='h-max md:h-screen grid grid-cols-[1fr] md:grid-cols-[1fr_4fr] grid-rows-[auto] md:grid-rows-[2fr_20fr_1fr] bg-primary-light dark:bg-primary-dark'>

@@ -4,23 +4,26 @@
 		"styles": "Styles",
 		"builders": "Builders",
 		"tools": "Tools",
-		"also-worked": "Also worked with",
-		"stats": "Stats"
+		"alsoWorked": "Also worked with",
+		"stats": "Stats",
+		"lastUpdate": "The last page update"
 	},
 	"be": {
 		"technologies": "Тэхналёгіі",
 		"styles": "Стылі",
 		"builders": "Зборшчыкі",
 		"tools": "Інструмэнты",
-		"also-worked": "Таксама працаваў з",
-		"stats": "Статыстыка"
+		"alsoWorked": "Таксама працаваў з",
+		"stats": "Статыстыка",
+		"lastUpdate": "Апошняя абнова гэтай старонкі"
 	},
 	"pl": {
 		"technologies": "Technologie",
 		"styles": "Style",
 		"builders": "Buildery",
 		"tools": "Narzędzia",
-		"also-worked": "Też pracowałem z",
-		"stats": "Statystyki"
+		"alsoWorked": "Też pracowałem z",
+		"stats": "Statystyki",
+		"lastUpdate": "Ostatnia aktualizacja tej strony"
 	}
 }

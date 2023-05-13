@@ -14,7 +14,7 @@ import {
 } from '@/lib/util';
 import { replaceKeywordsByBadges } from '@/lib/replaceKeywordsByBadges';
 import { fixApostrophes } from '@/lib/fixApostrophes';
-import { ProjectMetaData } from '@/lib/projects';
+import { Meta, ProjectMetaData, ProjectType } from '@/lib/projects';
 
 export type DataFromMd<TMeta extends ProjectMetaData> = {
 	meta: TMeta;
@@ -66,32 +66,40 @@ const postprocess = composeReplacers([
 	makeImagesLazy
 ]);
 
-export type ModifiedMetaData<T> = T & {
-	lastModified: number;
+export type ModifiedMetaDataOfType<T extends ProjectType> = Meta<T> & {
+	lastModified: Date;
 };
-type ProcessReturnType<TMeta extends ProjectMetaData> = DataFromMd<
-	ModifiedMetaData<TMeta>
+type ProcessReturnType<TType extends ProjectType> = DataFromMd<
+	ModifiedMetaDataOfType<TType>
 >;
 
+type ProjectFilePath<TType extends ProjectType> = [
+	lang: Lang,
+	type: TType,
+	name: string
+];
+type IndexFilePath = [lang: Lang, name: string];
+
 const remarkProcessor = remark().use(html);
-export const htmlFromMd = async <TMeta extends ProjectMetaData>(
-	pathArr: [Lang, ...string[]]
-): Promise<ProcessReturnType<TMeta>> => {
+export const htmlFromMd = async <TType extends ProjectType>(
+	pathArr: ProjectFilePath<TType> | IndexFilePath
+): Promise<ProcessReturnType<TType>> => {
 	const pathName = `content/${pathArr.join('/')}.md`;
 
 	const lang = pathArr.shift() as Lang;
 
+	// @ts-ignore
 	const meta = pathArr.reduce<Record<string, any>>(
 		(acc, pathItem) => acc[pathItem as keyof typeof acc],
 		filesMeta
-	) as ModifiedMetaData<TMeta>;
+	) as any as ModifiedMetaDataOfType<TType>;
 
 	const [fileContent, { mtime }] = await Promise.all([
 		readFile(pathName, 'utf-8'),
 		stat(pathName)
 	]);
 
-	meta.lastModified = mtime.getTime();
+	meta.lastModified = new Date(mtime);
 
 	const { data, content } = matter(fileContent);
 
@@ -105,5 +113,5 @@ export const htmlFromMd = async <TMeta extends ProjectMetaData>(
 	return {
 		meta: Object.assign(meta, data),
 		content: postprocess(processedContent.toString())
-	} as ProcessReturnType<TMeta>;
+	} as ProcessReturnType<TType>;
 };

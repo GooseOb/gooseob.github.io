@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 import AppHead from './AppHead';
 import AppBody from './AppBody';
 import { AppParams } from '@/app/[lang]/layout';

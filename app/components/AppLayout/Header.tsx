@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import Link from 'next/link';
 import LanguageSelect from '@/app/components/LanguageSelect';
 import { Lang } from '@/lib/lang';
