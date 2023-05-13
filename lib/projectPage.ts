@@ -6,8 +6,12 @@ import {
 } from '@/lib/projectNames';
 import { NextPage } from 'next';
 
-const getStaticProjectParamsGenerator =
-	(getProjects: ProjectNamesGetter) => () =>
+type StaticProjectParamsGeneratorGetter = (
+	getProjects: ProjectNamesGetter
+) => (args: { params: AppParams }) => { name: string }[];
+
+const getStaticProjectParamsGenerator: StaticProjectParamsGeneratorGetter =
+	(getProjects) => () =>
 		getProjects().map((name) => ({ name }));
 
 export const generateStaticSiteParams =
@@ -15,9 +19,9 @@ export const generateStaticSiteParams =
 export const generateStaticUserscriptParams =
 	getStaticProjectParamsGenerator(getUserscripts);
 
-interface ProjectParams extends AppParams {
+type ProjectParams = AppParams & {
 	name: string;
-}
+};
 
 type Props = {
 	params: ProjectParams;
