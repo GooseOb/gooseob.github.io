@@ -7,7 +7,7 @@ page. If there is no stack, the project's written only on JavaScript.
 
 #### 😍If you want to hire me
 
-My real name is Edvin Dulko. Now I'm a computer science student of the
+My legal name is Edvin Dulko. Currently, I'm a computer science student of the
 University of Lodz.
 
 I can start working right now but part-time.
