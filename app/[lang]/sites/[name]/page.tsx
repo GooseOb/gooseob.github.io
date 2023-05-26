@@ -28,7 +28,6 @@ const SitePage: ProjectPage = ({ params }) => {
 				/>
 			</div>
 			<Content>{content}</Content>
-			<LastUpdate lang={params.lang} date={meta.lastModified} />
 			<ProjectStack>{meta.stack}</ProjectStack>
 		</div>
 	);

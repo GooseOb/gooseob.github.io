@@ -23,7 +23,6 @@ const UserscriptPage: ProjectPage = ({ params }) => {
 				<GithubIcon repo={meta.repo} />
 			</div>
 			<Content>{content}</Content>
-			<LastUpdate lang={params.lang} date={meta.lastModified} />
 			{meta.stack && <ProjectStack>{meta.stack}</ProjectStack>}
 		</div>
 	);

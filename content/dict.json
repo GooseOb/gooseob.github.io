@@ -6,7 +6,7 @@
 		"tools": "Tools",
 		"alsoWorked": "Also worked with",
 		"stats": "Stats",
-		"lastUpdate": "The last page update"
+		"lastUpdate": "The last update"
 	},
 	"be": {
 		"technologies": "Тэхналёгіі",
@@ -15,7 +15,7 @@
 		"tools": "Інструмэнты",
 		"alsoWorked": "Таксама працаваў з",
 		"stats": "Статыстыка",
-		"lastUpdate": "Апошняя абнова гэтай старонкі"
+		"lastUpdate": "Апошняя абнова"
 	},
 	"pl": {
 		"technologies": "Technologie",
@@ -24,6 +24,6 @@
 		"tools": "Narzędzia",
 		"alsoWorked": "Też pracowałem z",
 		"stats": "Statystyki",
-		"lastUpdate": "Ostatnia aktualizacja tej strony"
+		"lastUpdate": "Ostatnia aktualizacja"
 	}
 }

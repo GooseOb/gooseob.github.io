@@ -17,7 +17,7 @@ const Home: NextPage<Props> = ({ params }) => {
 			<Content markdownStyleClassName='content-from-markdown-home'>
 				{content}
 			</Content>
-			<LastUpdate lang={params.lang} date={meta.lastModified} />
+			<LastUpdate lang={params.lang} date={new Date()} />
 			<ProjectStack>{meta.stack}</ProjectStack>
 		</>
 	);

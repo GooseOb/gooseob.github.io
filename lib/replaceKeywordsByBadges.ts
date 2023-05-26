@@ -4,7 +4,10 @@ import { Replacer } from '@/lib/util';
 const keywordsRegex = new RegExp(`(${Object.keys(badges).join('|')})`, 'g');
 
 const groupBy: Replacer<[string]> = (text, separator) =>
-	`<div>${text.split(separator).join('</div><div>')}</div>`;
+	`<div>${text.split(separator).join('</div><div>')}</div>`.replace(
+		/\\<\/div><div>/g,
+		separator
+	);
 
 const group: Replacer = (text) => groupBy(groupBy(text, ','), ';');
 

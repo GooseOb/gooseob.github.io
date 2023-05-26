@@ -63,9 +63,7 @@ const postprocess = composeReplacers([
 	makeImagesLazy
 ]);
 
-export type ModifiedMetaDataOfType<T extends ProjectType> = Meta<T> & {
-	lastModified: Date;
-};
+export type ModifiedMetaDataOfType<T extends ProjectType> = Meta<T>;
 type ProcessReturnType<TType extends ProjectType> = DataFromMd<
 	ModifiedMetaDataOfType<TType>
 >;
@@ -95,8 +93,6 @@ export const htmlFromMd = async <TType extends ProjectType>(
 		readFile(pathName, 'utf-8'),
 		stat(pathName)
 	]);
-
-	meta.lastModified = new Date(mtime);
 
 	const { data, content } = matter(fileContent);
 

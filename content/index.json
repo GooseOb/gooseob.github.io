@@ -4,7 +4,7 @@
 		"type": "pet",
 		"repo": "https://github.com/GooseOb/gooseob.github.io",
 		"url": "https://gooseob.github.io/",
-		"stack": "TypeScript, Next.js (appDir), TailwindCSS"
+		"stack": "TypeScript, Next.js (appDir\\, SSG), TailwindCSS"
 	},
 	"sites": {
 		"passports": {
@@ -12,7 +12,7 @@
 			"type": "pet",
 			"repo": "https://github.com/GooseOb/passports",
 			"url": "https://gooseob.github.io/passports/",
-			"stack": "JavaScript -> TypeScript, GULP -> Vite, SASS; google apps scripts (JavaScript with their own API)"
+			"stack": "HTML, JavaScript -> TypeScript, GULP -> Vite, SASS; google apps scripts (JavaScript with their own API)"
 		},
 		"shop-app": {
 			"name": "shop-app",
@@ -26,7 +26,7 @@
 			"type": "pet",
 			"repo": "https://github.com/GooseOb/taraskevizatar",
 			"url": "https://gooseob.github.io/taraskevizatar/",
-			"stack": "JavaScript -> TypeScript, GULP -> Webpack, SASS"
+			"stack": "HTML, JavaScript -> TypeScript, GULP -> Webpack, SASS"
 		}
 	},
 	"userscripts": {
@@ -44,7 +44,13 @@
 			"name": "YT-Defaulter",
 			"repo": "https://github.com/GooseOb/YT-Defaulter",
 			"url": "https://greasyfork.org/en/scripts/454696-youtube-defaulter",
-			"stack": "JavaScript -> TypeScript, GULP"
+			"stack": "JavaScript -> TypeScript, CSS, GULP"
+		},
+		"usos-dark": {
+			"name": "usos-dark",
+			"repo": "https://github.com/GooseOb/usos-dark",
+			"url": "https://greasyfork.org/en/scripts/466537-usos-dark-mode",
+			"stack": "TypeScript, CSS, GULP"
 		}
 	}
 }

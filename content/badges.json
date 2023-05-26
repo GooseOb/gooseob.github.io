@@ -2,6 +2,7 @@
 	"JavaScript": "JavaScript-%23FFCE5A?logo=javascript&logoColor=000000",
 	"TypeScript": "TypeScript-007ACC?logo=typescript&logoColor=white",
 	"HTML5": "HTML5-%23E44D27?logo=html5&logoColor=white",
+	"HTML": "HTML-%23E44D27?logo=html5&logoColor=white",
 
 	"NodeJS": "NodeJS-white?logo=Node.JS",
 
@@ -11,6 +12,7 @@
 	"Next.js": "Next.js-%231a202c?logo=next.js",
 
 	"CSS3": "CSS3-%231572B6?logo=css3",
+	"CSS": "CSS-%231572B6?logo=css3",
 	"SASS": "SASS-c69?logo=sass&logoColor=white",
 	"PostCSS": "PostCSS-DD3A0A?logo=postcss&logoColor=white",
 
@@ -33,6 +35,7 @@
 
 	"Bash": "Bash-%231a202c?logo=gnubash",
 	"PHP": "PHP-777BB4?logo=php&logoColor=white",
+	"MySQL": "MySQL-00000F?logo=mysql&logoColor=white",
 	"Markdown": "Markdown-%231a202c?logo=markdown",
 
 	"Photoshop": "Photoshop-31A8FF?logo=adobephotoshop&logoColor=black"
