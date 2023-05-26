@@ -5,7 +5,7 @@ import { Lang } from '@/lib/lang';
 
 type Props = {
 	value: Lang;
-	options: any[];
+	options: JSX.Element[];
 };
 
 const LanguageSelectClient: FC<Props> = ({ value, options }) => {
