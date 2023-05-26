@@ -20,11 +20,11 @@ export const composeReplacers =
 export const replaceAsync = async (
 	str: string,
 	regex: RegExp,
-	asyncReplacer: (...args: string[]) => Promise<string>
+	replacer: (...args: string[]) => Promise<string>
 ) => {
 	const promises = [] as Promise<string>[];
 	str.replace(regex, (...args: string[]) => {
-		promises.push(asyncReplacer(...args));
+		promises.push(replacer(...args));
 		return '';
 	});
 	const data = await Promise.all(promises);

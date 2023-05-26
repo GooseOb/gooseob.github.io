@@ -22,11 +22,8 @@ export type DataFromMd<TMeta extends ProjectMetaData> = {
 };
 
 const resolveImports: AsyncReplacer<[string]> = (content, pathName) =>
-	replaceAsync(
-		content,
-		/\[@include]\((.*?)\)/g,
-		async ($0, $1) =>
-			await resolveImportsHelper(path.resolve(pathName, '..', $1))
+	replaceAsync(content, /\[@include]\((.*?)\)/g, ($0, $1) =>
+		resolveImportsHelper(path.resolve(pathName, '..', $1))
 	);
 
 const resolveImportsHelper = async (pathName: string): Promise<string> => {
