@@ -5,10 +5,32 @@ import Content from '@/app/components/Content';
 import ProjectStack from '@/app/components/ProjectStack';
 import GithubIcon from '@/app/components/GithubIcon';
 export { generateStaticSiteParams as generateStaticParams } from '@/lib/projectPage';
-import LastUpdate from '@/app/components/LastUpdate';
+import Image from 'next/image';
+
+const imgClassName =
+	'mx-auto rounded-2xl min-h-[150px] md:h-[40vh] object-cover object-top object-position-animation';
 
 const SitePage: ProjectPage = ({ params }) => {
 	const { meta, content } = useSite(params.name, params.lang);
+
+	const mainImage = meta.url ? (
+		<IconLink
+			href={meta.url}
+			src={meta.img}
+			imgClassName={imgClassName}
+			linkClassName='opacity-80 hover:opacity-100'
+			alt='go to the site'
+			width={1920}
+		/>
+	) : (
+		<Image
+			src={meta.img}
+			className={imgClassName}
+			alt={''}
+			width={1920}
+			height={1920}
+		/>
+	);
 
 	return (
 		<div>
@@ -18,14 +40,7 @@ const SitePage: ProjectPage = ({ params }) => {
 					<GithubIcon repo={meta.repo} />
 					<h1>{meta.name}</h1>
 				</div>
-				<IconLink
-					href={meta.url}
-					alt='go to site'
-					src={meta.img}
-					width={1920}
-					imgClassName='mx-auto rounded-2xl min-h-[150px] md:h-[40vh] object-cover object-top object-position-animation'
-					linkClassName='opacity-80 hover:opacity-100'
-				/>
+				{mainImage}
 			</div>
 			<Content>{content}</Content>
 			<ProjectStack>{meta.stack}</ProjectStack>

@@ -27,6 +27,12 @@
 			"repo": "https://github.com/GooseOb/taraskevizatar",
 			"url": "https://gooseob.github.io/taraskevizatar/",
 			"stack": "HTML, JavaScript -> TypeScript, GULP -> Webpack, SASS"
+		},
+		"php-spi": {
+			"name": "php-spi",
+			"type": "university",
+			"repo": "https://github.com/GooseOb/php-spi",
+			"stack": "PHP, MySQL; HTML, CSS"
 		}
 	},
 	"userscripts": {

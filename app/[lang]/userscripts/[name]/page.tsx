@@ -3,7 +3,6 @@ import { useUserscript } from '@/lib/projects';
 import IconLink from '@/app/components/IconLink';
 import Content from '@/app/components/Content';
 import GithubIcon from '@/app/components/GithubIcon';
-import LastUpdate from '@/app/components/LastUpdate';
 import ProjectStack from '@/app/components/ProjectStack';
 export { generateStaticUserscriptParams as generateStaticParams } from '@/lib/projectPage';
 

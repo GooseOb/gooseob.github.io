@@ -14,7 +14,7 @@ export type UserscriptMetaData = ProjectMetaData & {
 
 export type SiteMetaData = ProjectMetaData & {
 	img: string;
-	url: string;
+	url?: string;
 	type: string;
 	stack: string;
 };
