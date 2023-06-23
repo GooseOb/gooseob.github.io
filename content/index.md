@@ -10,7 +10,7 @@ NodeJS
 **@dict(styles)**
 @style(margin-top: 1em)
 
-CSS3 SASS PostCSS
+CSS3 SASS
 
 TailwindCSS MaterialUI
 
@@ -33,7 +33,7 @@ WebStorm VSCode
 **@dict(alsoWorked)**
 @style(margin-top: 1em)
 
-Bash PHP
+Bash PHP MySQL
 
 Markdown
 

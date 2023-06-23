@@ -11,11 +11,10 @@ Jeśli nie ma stosu, to znaczy, że projekt jest napisany tylko na JavaScript.
 Nazywam się Edvin Dulko. Obecnie studiuję informatykę na
 Uniwersytecie Łódzkim.
 
-Mogę zacząć pracę od zaraz, ale nie na pełny etat.
-Czerwiec jest ostatnim miesiącem roku akademickiego
-(i jest to miesiąc, w którym skończę 18 lat), więc od lipca mogę pracować na pełen etat.
+Mogę zacząć pracę zdalnie od zaraz lub w Łodzi od września,
+pełny etat lub niepełny
 
-Języki, którymi mogę się posługiwać:
+Języki, którymi się posługiwam:
 - Polski
 - Białoruski
 - Rosyjski
