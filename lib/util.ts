@@ -22,7 +22,7 @@ export const replaceAsync = async (
 	regex: RegExp,
 	replacer: (...args: string[]) => Promise<string>
 ) => {
-	const promises = [] as Promise<string>[];
+	const promises: Promise<string>[] = [];
 	str.replace(regex, (...args: string[]) => {
 		promises.push(replacer(...args));
 		return '';

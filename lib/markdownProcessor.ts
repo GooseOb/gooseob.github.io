@@ -106,5 +106,5 @@ export const htmlFromMd = async <TType extends ProjectType>(
 	return {
 		meta: Object.assign(meta, data),
 		content: postprocess(processedContent.toString())
-	} as ProcessReturnType<TType>;
+	};
 };
