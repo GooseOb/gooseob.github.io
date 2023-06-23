@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,7 +7,6 @@ type IconLinkProps = {
 	src: string;
 	alt: string;
 	internal?: boolean;
-	as?: string;
 	className?: string;
 	linkClassName?: string;
 	imgClassName?: string;
@@ -17,7 +16,6 @@ type IconLinkProps = {
 
 const IconLink: FC<IconLinkProps> = ({
 	href,
-	as = href,
 	src,
 	alt,
 	internal = false,
@@ -26,29 +24,20 @@ const IconLink: FC<IconLinkProps> = ({
 	imgClassName = 'h-[1em] w-[1em]',
 	width = 100,
 	height = width!
-}) => {
-	const img = (
-		<Image
-			src={src}
-			className={imgClassName}
-			width={width}
-			height={height}
-			alt={alt}
-		/>
-	);
-	return (
-		<div className={className}>
-			{internal ? (
-				<Link className={linkClassName} href={href} as={as}>
-					{img}
-				</Link>
-			) : (
-				<a className={linkClassName} href={href}>
-					{img}
-				</a>
-			)}
-		</div>
-	);
-};
+}) => (
+	<div className={className}>
+		{React.createElement(
+			internal ? Link : 'a',
+			{ className: linkClassName, href },
+			<Image
+				src={src}
+				className={imgClassName}
+				width={width}
+				height={height}
+				alt={alt}
+			/>
+		)}
+	</div>
+);
 
 export default IconLink;
