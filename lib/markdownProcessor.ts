@@ -83,8 +83,8 @@ export const htmlFromMd = async <TType extends ProjectType>(
 
 	const lang = pathArr.shift() as Lang;
 
-	// @ts-ignore
-	const meta = pathArr.reduce<Record<string, any>>(
+	const meta = pathArr.reduce(
+		// @ts-ignore
 		(acc, pathItem) => acc[pathItem as keyof typeof acc],
 		filesMeta
 	) as any as ModifiedMetaDataOfType<TType>;
