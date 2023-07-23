@@ -1,6 +1,6 @@
 #### Moja praca domowa na zajęcia ze Środowiska pracy informatyka
 
-### Możliwości
+### Content
 
 Projekt ma wiele stron.
 Niestety, nie można tego zobaczyć samodzielnie

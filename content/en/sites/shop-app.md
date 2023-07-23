@@ -1,4 +1,4 @@
-### Features
+### Content
 
 We can search the products by name, category and price. There is the login
 button, we don't have to input any data, just click the "LOG IN" in popup. After

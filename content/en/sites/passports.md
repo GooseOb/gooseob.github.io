@@ -1,6 +1,6 @@
 #### Passport system visualization of the virtual states
 
-### Features
+### Content
 
 We can flip the pages of the passport, rotate it. Input the passport id to the
 id field and get it. Color of background is changing if the state of current

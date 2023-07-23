@@ -1,6 +1,6 @@
 #### Wizualizacja systemu paszportowego krajów wirtualnych
 
-### Możliwości
+### Kontent
 
 Możemy przewracać strony paszportu, obracać go. Wprowadzać id paszportu
 do pola id i móc go przeglądać. Kolor tła się zmienia

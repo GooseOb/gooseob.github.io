@@ -1,4 +1,4 @@
-### Możliwości
+### Content
 
 Możemy szukać według nazwy produktu, kategorii i ceny.
 W nagłówku mamy przycisk loginu, nie musimy wprowadzać żadnych danych, po prostu

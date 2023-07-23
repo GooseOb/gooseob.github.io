@@ -1,6 +1,6 @@
 #### Konwerter ortografii białoruskiej. Ze współczesnej akademickiej do klasycznej
 
-### Możliwości
+### Content
 
 Mamy pole tekstowe na tekst do konwersji i początkową treść w nim.
 Możemy użyć specjalnych konstrukcji

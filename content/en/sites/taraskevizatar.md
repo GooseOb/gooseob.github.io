@@ -1,6 +1,6 @@
 #### Converter of belarusian orthography. From the modern academic to the classic
 
-### Features
+### Content
 
 There is the text box for a text to convert and initial content in it. We can
 use the special constructions to avoid processing the text we want to keep as it

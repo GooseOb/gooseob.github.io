@@ -1,6 +1,6 @@
 #### My homework for the Programmer's Working Environment classes
 
-### Features
+### Content
 
 There are multiple pages.
 Unfortunately, you can't see this on your own
