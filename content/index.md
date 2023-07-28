@@ -1,5 +1,13 @@
-#### 📚@dict(technologies)
+@component @h-1 {
+#### $1@dict($0)
 @style(margin-top: 1em)
+}
+@component @h-2 {
+**@dict($0)**
+@style(margin-top: 1em)
+}
+
+@h-1(technologies, 📚)
 
 JavaScript TypeScript HTML5
 
@@ -7,22 +15,19 @@ React Redux Redux Toolkit Next.js
 
 NodeJS
 
-**@dict(styles)**
-@style(margin-top: 1em)
+@h-2(styles)
 
 CSS3 SASS
 
 TailwindCSS MaterialUI
 
-**@dict(builders)**
-@style(margin-top: 1em)
+@h-2(builders)
 
 Webpack Vite
 
 GULP
 
-**@dict(tools)**
-@style(margin-top: 1em)
+@h-2(tools)
 
 ESLint Prettier
 
@@ -30,15 +35,13 @@ GitHub Git
 
 WebStorm VSCode
 
-**@dict(alsoWorked)**
-@style(margin-top: 1em)
+@h-2(alsoWorked)
 
 Bash PHP MySQL
 
 Markdown
 
-#### 📊@dict(stats)
-@style(margin-top: 1em)
+@h-1(stats, 📊)
 
 ![GooseOb github stats](https://github-readme-stats.vercel.app/api?username=GooseOb&show_icons=true&theme=ocean_dark)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=GooseOb&layout=compact&theme=ocean_dark)

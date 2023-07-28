@@ -26,17 +26,53 @@ const resolveImports: AsyncReplacer<[string]> = (content, pathName) =>
 		resolveImportsHelper(path.resolve(pathName, '..', $1))
 	);
 
+const cachedFiles: Record<string, string> = {};
 const resolveImportsHelper = async (pathName: string): Promise<string> => {
-	const fileContent = await readFile(pathName, 'utf-8');
-	const { content } = matter(fileContent);
+	if (process.env.NODE_ENV === 'development' || !cachedFiles[pathName]) {
+		cachedFiles[pathName] = matter(await readFile(pathName, 'utf-8')).content;
+	} else console.log(pathName, 'is from cache');
 
-	return await resolveImports(content, pathName);
+	return resolveImports(cachedFiles[pathName], pathName);
 };
 
 const resolveAlias: Replacer<[string]> = (text, pathName) =>
 	text.replace(/]\(@(?=\/)/g, '](/assets/' + pathName);
 
-const resolveCustomFunctions: Replacer<[Lang]> = (text, lang) =>
+const componentsRegex = /@component\s+(\S+?)\s*\{\s*([\S\s]+?)\s*}/g;
+const components: Record<string, string> = {};
+type PreprocessReplacer = Replacer<[Lang]>;
+const resolveCustomComponents: PreprocessReplacer = (text) => {
+	text = text.replace(componentsRegex, ($0, $1, $2) => {
+		components[$1] = $2;
+		return '';
+	});
+	const componentNames = Object.keys(components);
+	return componentNames.length
+		? text.replace(
+				new RegExp(`(${componentNames.join('|')})\\((.+?)\\)`, 'g'),
+				($0, $1: string, $2: string) => {
+					const args = $2.split(',').map((a) => a.trim());
+					const componentContent = components[$1];
+					if (!componentContent) return $0;
+					return componentContent.replace(
+						/\$(\d+)/g,
+						($1, $2) => args[$2] || lackOfComponentArgs($0)
+					);
+				}
+		  )
+		: text;
+};
+
+const lackOfComponentArgs = (componentName: string) => {
+	throw 'too little arguments in the component ' + componentName;
+};
+
+const logAndContinue = <T>(arg: T) => {
+	console.log(arg);
+	return arg;
+};
+
+const resolveCustomFunctions: PreprocessReplacer = (text, lang) =>
 	text.replace(
 		/@dict\((.*?)\)/g,
 		($0, $1: keyof typeof dict.en) => dict[lang][$1]
@@ -56,7 +92,11 @@ const processExtendedSyntax: Replacer = (text) =>
 const makeImagesLazy: Replacer = (text) =>
 	text.replace(/<img/g, '<img loading="lazy" decoding="async"');
 
-const preprocess = composeReplacers([resolveCustomFunctions, fixApostrophes]);
+const preprocess = composeReplacers([
+	resolveCustomComponents,
+	resolveCustomFunctions,
+	fixApostrophes
+]);
 const postprocess = composeReplacers([
 	processExtendedSyntax,
 	replaceKeywordsByBadges,
@@ -76,6 +116,7 @@ type ProjectFilePath<TType extends ProjectType> = [
 type IndexFilePath = [lang: Lang, name: string];
 
 const remarkProcessor = remark().use(html);
+const readMdFile = (pathName: string) => readFile(pathName, 'utf-8');
 export const htmlFromMd = async <TType extends ProjectType>(
 	pathArr: ProjectFilePath<TType> | IndexFilePath
 ): Promise<ProcessReturnType<TType>> => {
@@ -89,12 +130,7 @@ export const htmlFromMd = async <TType extends ProjectType>(
 		filesMeta
 	) as any as ModifiedMetaDataOfType<TType>;
 
-	const [fileContent, { mtime }] = await Promise.all([
-		readFile(pathName, 'utf-8'),
-		stat(pathName)
-	]);
-
-	const { data, content } = matter(fileContent);
+	const { data, content } = matter(await readMdFile(pathName));
 
 	const resolvedContent = preprocess(
 		resolveAlias(await resolveImports(content, pathName), pathArr[1]),
