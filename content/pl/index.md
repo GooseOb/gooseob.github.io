@@ -11,13 +11,12 @@ Jeśli nie ma stosu, to znaczy, że projekt jest napisany tylko na JavaScript.
 Nazywam się Edvin Dulko. Obecnie studiuję informatykę na
 Uniwersytecie Łódzkim.
 
-Mogę zacząć pracę zdalnie od zaraz lub w Łodzi od września,
-pełny etat lub niepełny
+Mogę zacząć pracę od zaraz, zdalnie lub w Łodzi, niepełny etat
 
 Języki, którymi się posługiwam:
 - Polski
 - Białoruski
 - Rosyjski
-- Angielski (zaczęłem się uczyć rok temu, wciąż się w tym doskonalę)
+- Angielski (wciąż się w tym doskonalę)
 
 [@include](../index.md)

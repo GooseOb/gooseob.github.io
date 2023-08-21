@@ -26,7 +26,7 @@
 			"type": "pet",
 			"repo": "https://github.com/GooseOb/taraskevizatar",
 			"url": "https://gooseob.github.io/taraskevizatar/",
-			"stack": "HTML, JavaScript -> TypeScript, GULP -> Webpack, SASS"
+			"stack": "HTML, JavaScript -> TypeScript, GULP -> Webpack -> Vite, SASS; tsup"
 		},
 		"php-spi": {
 			"name": "php-spi",

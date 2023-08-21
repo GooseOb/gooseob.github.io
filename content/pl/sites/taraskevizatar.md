@@ -58,3 +58,22 @@ frontendu taraszkievizatoru, który współdziała z tym API.
 Dodałem alias `@api` dla importu i jeśli build jest w trybie api,
 `@api` importuje funkcję fetch zamiast funkcji z logiką taraszkievizacji
 na frontend.
+
+Po jakimś czasie jeden człowiek poprosił mnie w issue na GitHubie
+o przeniesienie logiki konwersji do pakietu npm.
+I przeniosłem to, wraz z generowaniem jsonów, do innego repozytorium.
+Do buildingu wybrałem tsup, to prosty builder, który pozwala na użycie
+pluginów esbuild. Prościej było stworzyć plugin do generowania jsonów
+z esbuildem niż z Webpack. No i tyle,
+[pakiet](https://www.npmjs.com/package/taraskevizer)
+jest na npm.
+
+Następnie skonfigurowałem CI/CD za pomocą GitHub Actions.
+Workflow polega na buduje projekt i publikuje go jako pakiet npm,
+po udanej publikacji uruchamia workflow w repozytorium aplikacji,
+który kompiluje i publikuje aplikację na GitHub Pages.
+
+Przeprowadziłem również migrację aplikacji z Webpack do Vite,
+więc budowanie stało się o 3 razy szybsze, a hot-reloads nie są już zepsute.
+Vite pozwala na używanie pluginów rollup, a ich pisanie
+jest nawet prostsze niż w przypadku esbuilda.

@@ -5,6 +5,7 @@
 	"HTML": "HTML-%23E44D27?logo=html5&logoColor=white",
 
 	"NodeJS": "NodeJS-white?logo=Node.JS",
+	"npm": "npm-white?logo=npm",
 
 	"React": "React-1d3c6e?logo=react&logoColor=white",
 	"Redux Toolkit": "Redux_Toolkit-764ABC?logo=redux&logoColor=white",
@@ -21,12 +22,15 @@
 
 	"Webpack": "Webpack-%231a202c?logo=webpack",
 	"Vite": "Vite-%231a202c?logo=vite",
+	"esbuild": "esbuild-%231a202c?logo=esbuild",
 
 	"GULP": "GULP-CF4647?logo=gulp&logoColor=white",
 
 	"ESLint": "ESLint-purple?logo=Eslint&logoColor=white",
 	"Prettier": "Prettier-black?logo=Prettier&logoColor=white",
 
+	"GitHub Actions": "GitHub_Actions-black?logo=github",
+	"GitHub Pages": "GitHub_Pages-black?logo=github",
 	"GitHub": "GitHub-black?logo=github",
 	"Git": "Git-black?logo=git",
 

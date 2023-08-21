@@ -10,13 +10,12 @@ page. If there is no stack, the project's written only on JavaScript.
 My legal name is Edvin Dulko. Currently, I'm a computer science student of the
 University of Lodz.
 
-I can start working remotely now or in Lodz since september,
-part-time or full-time
+I can start working now, remotely or in Lodz, part-time
 
 Languages I can speak:
 - Polish
 - Belarusian
 - Russian
-- English (started learning 1 year ago, still working on this)
+- English (probably B2, still working on this)
 
 [@include](../index.md)

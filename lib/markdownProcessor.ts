@@ -1,6 +1,6 @@
 import { remark } from 'remark';
 import html from 'remark-html';
-import { readFile, stat } from 'fs/promises';
+import { readFile } from 'fs/promises';
 import matter from 'gray-matter';
 import path from 'path';
 import filesMeta from '@/content/index.json';

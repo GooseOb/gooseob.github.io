@@ -31,7 +31,8 @@ GULP
 
 ESLint Prettier
 
-GitHub Git
+Git
+GitHub Actions
 
 WebStorm VSCode
 

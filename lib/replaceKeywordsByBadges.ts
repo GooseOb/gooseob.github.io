@@ -1,7 +1,10 @@
 import badges from '@/content/badges.json';
 import { Replacer } from '@/lib/util';
 
-const keywordsRegex = new RegExp(`(${Object.keys(badges).join('|')})`, 'g');
+const keywordsRegex = new RegExp(
+	`(?<!http\\S*)(${Object.keys(badges).join('|')})`,
+	'g'
+);
 
 const groupBy: Replacer<[string]> = (text, separator) =>
 	`<div>${text.split(separator).join('</div><div>')}</div>`.replace(
