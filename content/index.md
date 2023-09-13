@@ -13,7 +13,7 @@ JavaScript TypeScript HTML5
 
 React Redux Redux Toolkit Next.js
 
-NodeJS
+NodeJS Bun
 
 @h-2(styles)
 

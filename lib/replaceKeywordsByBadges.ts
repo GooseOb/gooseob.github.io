@@ -3,7 +3,7 @@ import { Replacer } from '@/lib/util';
 
 const keywordsRegex = new RegExp(
 	`(?<!http\\S*)(${Object.keys(badges).join('|')})`,
-	'g'
+	'gi'
 );
 
 const groupBy: Replacer<[string]> = (text, separator) =>
@@ -19,7 +19,7 @@ export const replaceKeywordsByBadges: Replacer = (text) =>
 		keywordsRegex,
 		($0) =>
 			`<img src='https://img.shields.io/badge/${
-				badges[$0 as keyof typeof badges]
+				badges[$0.toLowerCase() as keyof typeof badges]
 			}' alt='${$0}' class='tech-label'>`
 	);
 

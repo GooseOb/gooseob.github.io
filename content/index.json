@@ -50,13 +50,13 @@
 			"name": "YT-Defaulter",
 			"repo": "https://github.com/GooseOb/YT-Defaulter",
 			"url": "https://greasyfork.org/en/scripts/454696-youtube-defaulter",
-			"stack": "JavaScript -> TypeScript, CSS, GULP"
+			"stack": "JavaScript -> TypeScript, CSS, GULP -> Bun"
 		},
 		"usos-dark": {
 			"name": "usos-dark",
 			"repo": "https://github.com/GooseOb/usos-dark",
 			"url": "https://greasyfork.org/en/scripts/466537-usos-dark-mode",
-			"stack": "TypeScript, CSS, GULP"
+			"stack": "TypeScript, CSS, GULP -> Bun"
 		}
 	}
 }

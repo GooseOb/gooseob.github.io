@@ -1,46 +1,47 @@
 {
-	"JavaScript": "JavaScript-%23FFCE5A?logo=javascript&logoColor=000000",
-	"TypeScript": "TypeScript-007ACC?logo=typescript&logoColor=white",
-	"HTML5": "HTML5-%23E44D27?logo=html5&logoColor=white",
-	"HTML": "HTML-%23E44D27?logo=html5&logoColor=white",
+	"javascript": "JavaScript-%23FFCE5A?logo=javascript&logoColor=000000",
+	"typescript": "TypeScript-007ACC?logo=typescript&logoColor=white",
+	"html5": "HTML5-%23E44D27?logo=html5&logoColor=white",
+	"html": "HTML-%23E44D27?logo=html5&logoColor=white",
 
-	"NodeJS": "NodeJS-white?logo=Node.JS",
+	"bun": "Bun-black?logo=bun",
+	"nodejs": "NodeJS-white?logo=Node.JS",
 	"npm": "npm-white?logo=npm",
 
-	"React": "React-1d3c6e?logo=react&logoColor=white",
-	"Redux Toolkit": "Redux_Toolkit-764ABC?logo=redux&logoColor=white",
-	"Redux": "Redux-764ABC?logo=redux&logoColor=white",
-	"Next.js": "Next.js-%231a202c?logo=next.js",
+	"react": "React-1d3c6e?logo=react&logoColor=white",
+	"redux toolkit": "Redux_Toolkit-764ABC?logo=redux&logoColor=white",
+	"redux": "Redux-764ABC?logo=redux&logoColor=white",
+	"next.js": "Next.js-%231a202c?logo=next.js",
 
-	"CSS3": "CSS3-%231572B6?logo=css3",
-	"CSS": "CSS-%231572B6?logo=css3",
-	"SASS": "SASS-c69?logo=sass&logoColor=white",
-	"PostCSS": "PostCSS-DD3A0A?logo=postcss&logoColor=white",
+	"css3": "CSS3-%231572B6?logo=css3",
+	"css": "CSS-%231572B6?logo=css3",
+	"sass": "SASS-c69?logo=sass&logoColor=white",
+	"postcss": "PostCSS-DD3A0A?logo=postcss&logoColor=white",
 
-	"TailwindCSS": "TailwindCSS-%231a202c?logo=tailwind-css",
-	"MaterialUI": "MaterialUI-%231a202c?logo=mui",
+	"tailwindcss": "TailwindCSS-%231a202c?logo=tailwind-css",
+	"materialui": "MaterialUI-%231a202c?logo=mui",
 
-	"Webpack": "Webpack-%231a202c?logo=webpack",
-	"Vite": "Vite-%231a202c?logo=vite",
+	"webpack": "Webpack-%231a202c?logo=webpack",
+	"vite": "Vite-%231a202c?logo=vite",
 	"esbuild": "esbuild-%231a202c?logo=esbuild",
 
-	"GULP": "GULP-CF4647?logo=gulp&logoColor=white",
+	"gulp": "GULP-CF4647?logo=gulp&logoColor=white",
 
-	"ESLint": "ESLint-purple?logo=Eslint&logoColor=white",
-	"Prettier": "Prettier-black?logo=Prettier&logoColor=white",
+	"eslint": "ESLint-purple?logo=Eslint&logoColor=white",
+	"prettier": "Prettier-black?logo=Prettier&logoColor=white",
 
-	"GitHub Actions": "GitHub_Actions-black?logo=github",
-	"GitHub Pages": "GitHub_Pages-black?logo=github",
-	"GitHub": "GitHub-black?logo=github",
-	"Git": "Git-black?logo=git",
+	"github actions": "GitHub_Actions-black?logo=github",
+	"github pages": "GitHub_Pages-black?logo=github",
+	"github": "GitHub-black?logo=github",
+	"git": "Git-black?logo=git",
 
-	"WebStorm": "WebStorm-black?logo=webstorm",
-	"VSCode": "VSCode-10102b?logo=visualstudiocode",
+	"webstorm": "WebStorm-black?logo=webstorm",
+	"vscode": "VSCode-10102b?logo=visualstudiocode",
 
-	"Bash": "Bash-%231a202c?logo=gnubash",
-	"PHP": "PHP-777BB4?logo=php&logoColor=white",
-	"MySQL": "MySQL-00000F?logo=mysql&logoColor=white",
-	"Markdown": "Markdown-%231a202c?logo=markdown",
+	"bash": "Bash-%231a202c?logo=gnubash",
+	"php": "PHP-777BB4?logo=php&logoColor=white",
+	"mysql": "MySQL-00000F?logo=mysql&logoColor=white",
+	"markdown": "Markdown-%231a202c?logo=markdown",
 
-	"Photoshop": "Photoshop-31A8FF?logo=adobephotoshop&logoColor=black"
+	"photoshop": "Photoshop-31A8FF?logo=adobephotoshop&logoColor=black"
 }
