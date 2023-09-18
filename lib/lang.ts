@@ -10,4 +10,5 @@ const langs = ['en', 'be', 'pl'] as const;
 
 export type Lang = ArrayElement<typeof langs>;
 
-export const langObjArr = langs.map((lang) => ({ lang }));
+const langObjArr = langs.map((lang) => ({ lang }));
+export const getLangObjArr = () => langObjArr;

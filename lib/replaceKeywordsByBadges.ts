@@ -2,7 +2,7 @@ import badges from '@/content/badges.json';
 import { Replacer } from '@/lib/util';
 
 const keywordsRegex = new RegExp(
-	`(?<!http\\S*)(${Object.keys(badges).join('|')})`,
+	`(?<!http\\S*| \\S+="[^"]+)(${Object.keys(badges).join('|')})`,
 	'gi'
 );
 
