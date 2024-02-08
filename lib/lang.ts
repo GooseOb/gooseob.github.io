@@ -1,5 +1,3 @@
-import { ArrayElement } from '@/lib/util';
-
 export const langText = Object.entries({
 	en: 'english',
 	be: 'беларуская',
@@ -8,7 +6,7 @@ export const langText = Object.entries({
 
 const langs = ['en', 'be', 'pl'] as const;
 
-export type Lang = ArrayElement<typeof langs>;
+export type Lang = (typeof langs)[number];
 
 const langObjArr = langs.map((lang) => ({ lang }));
 export const getLangObjArr = () => langObjArr;

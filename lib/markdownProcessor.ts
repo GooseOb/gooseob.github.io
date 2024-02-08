@@ -30,7 +30,9 @@ const cachedFiles: Record<string, string> = {};
 const resolveImportsHelper = async (pathName: string): Promise<string> => {
 	if (process.env.NODE_ENV === 'development' || !cachedFiles[pathName]) {
 		cachedFiles[pathName] = matter(await readFile(pathName, 'utf-8')).content;
-	} else console.log(pathName, 'is from cache');
+	} else {
+		console.log(pathName, 'is from cache');
+	}
 
 	return resolveImports(cachedFiles[pathName], pathName);
 };

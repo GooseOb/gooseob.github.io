@@ -1,6 +1,3 @@
-export type ArrayElement<TArray extends readonly unknown[]> =
-	TArray extends readonly (infer TElement)[] ? TElement : never;
-
 export type Promisify<T> = T extends (...args: infer TArgs) => infer TReturn
 	? (...args: TArgs) => Promise<TReturn>
 	: never;
