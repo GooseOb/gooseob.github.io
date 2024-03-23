@@ -1,3 +1,4 @@
+
 export type Promisify<T> = T extends (...args: infer TArgs) => infer TReturn
 	? (...args: TArgs) => Promise<TReturn>
 	: never;
