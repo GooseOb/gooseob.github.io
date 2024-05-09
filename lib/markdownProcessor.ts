@@ -22,7 +22,7 @@ export type DataFromMd<TMeta extends ProjectMetaData> = {
 };
 
 const resolveImports: AsyncReplacer<[string]> = (content, pathName) =>
-	replaceAsync(content, /\[@include]\((.*?)\)/g, ($0, $1) =>
+	replaceAsync(content, /\[@include]\(([^)]*?)\)/g, ($0, $1) =>
 		resolveImportsHelper(path.resolve(pathName, '..', $1))
 	);
 
@@ -40,18 +40,18 @@ const resolveImportsHelper = async (pathName: string): Promise<string> => {
 const resolveAlias: Replacer<[string]> = (text, pathName) =>
 	text.replace(/]\(@(?=\/)/g, '](/assets/' + pathName);
 
-const componentsRegex = /@component\s+(\S+?)\s*\{\s*([\S\s]+?)\s*}/g;
+const componentsRegex = /@component\s+([^\s]+?)\s*?\{([^}]*?)}/g;
 const components: Record<string, string> = {};
 type PreprocessReplacer = Replacer<[Lang]>;
 const resolveCustomComponents: PreprocessReplacer = (text) => {
 	text = text.replace(componentsRegex, ($0, $1, $2) => {
-		components[$1] = $2;
+		components[$1] = $2.trim();
 		return '';
 	});
 	const componentNames = Object.keys(components);
 	return componentNames.length
 		? text.replace(
-				new RegExp(`(${componentNames.join('|')})\\((.+?)\\)`, 'g'),
+				new RegExp(`(${componentNames.join('|')})\\(([^)]+?)\\)`, 'g'),
 				($0, $1: string, $2: string) => {
 					const args = $2.split(',').map((a) => a.trim());
 					const componentContent = components[$1];
@@ -66,12 +66,7 @@ const resolveCustomComponents: PreprocessReplacer = (text) => {
 };
 
 const lackOfComponentArgs = (componentName: string) => {
-	throw 'too little arguments in the component ' + componentName;
-};
-
-const logAndContinue = <T>(arg: T) => {
-	console.log(arg);
-	return arg;
+	throw new Error('too little arguments in the component ' + componentName);
 };
 
 const resolveCustomFunctions: PreprocessReplacer = (text, lang) =>
@@ -83,11 +78,11 @@ const resolveCustomFunctions: PreprocessReplacer = (text, lang) =>
 const processExtendedSyntax: Replacer = (text) =>
 	text
 		.replace(
-			/(>.*?>\s)<p>@style\((.*?)\)<\/p>/g,
+			/(>[^>]*?>\s)<p>@style\(([^)]*?)\)<\/p>/g,
 			($0, $1, $2) => ` style="${$2}"${$1}`
 		)
 		.replace(
-			/(>.*?>\s*?)@style\((.*?)\)/g,
+			/(>[^>]*?>\s*?)@style\(([^)]*?)\)/g,
 			($0, $1, $2) => ` style="${$2}"${$1}`
 		);
 

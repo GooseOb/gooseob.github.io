@@ -23,7 +23,7 @@ const IconLink: FC<IconLinkProps> = ({
 	linkClassName = 'opacity-70 hover:opacity-100 select-none',
 	imgClassName = 'h-[1em] w-[1em]',
 	width = 100,
-	height = width!
+	height = width
 }) => (
 	<div className={className}>
 		{React.createElement(
