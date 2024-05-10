@@ -2,6 +2,7 @@
 #### $1@dict($0)
 @style(margin-top: 1em)
 }
+
 @component @h-2 {
 **@dict($0)**
 @style(margin-top: 1em)

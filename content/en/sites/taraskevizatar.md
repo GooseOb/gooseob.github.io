@@ -45,13 +45,13 @@ Webpack.
 
 ![old UI - desktop](@/old-desktop.jpg) ![old UI - mobile](@/old-mobile.jpg)
 
-[My friend](https://github.com/nopears) proposed me to change the UI of the
+[My friend](https://github.com/nopears) suggested me to change the UI of the
 project and I did it, the old UI is above.
 
 He also created the Nest.js API for the taraskevizatar later. I and wanted to
 avoid duplication of the dictionary file in the API and the frontend folders. It
-required using TypeScript and es modules, so I decided to rewrite the frontend in
-TypeScript and figured out Webpack configuration. I moved the dictionary and
+required using TypeScript and es modules, so I decided to rewrite the frontend
+in TypeScript and figured out Webpack configuration. I moved the dictionary and
 converting logic files to another folder, and we could use files from there in
 both of our projects.
 
@@ -63,14 +63,13 @@ taraskevization logic on frontend.
 After a while, someone asked me in issues on GitHub to move logic of conversion
 to an npm-package. And I moved this with json-generation to another repository.
 For building I chose tsup, it's simple builder, that allows use esbuild plugins.
-It was simpler to create a plugin for json-generation with esbuild 
-than with Webpack. And that's it, the
-[package](https://www.npmjs.com/package/taraskevizer)
-is on npm.
+It was simpler to create a plugin for json-generation with esbuild than with
+Webpack. And that's it, the
+[package](https://www.npmjs.com/package/taraskevizer) is on npm.
 
-Then, I set up CI/CD with GitHub Actions. The workflow is building project
-and publish it as npm-package, after successful publication it triggers
-a workflow in the app repository, that makes build and publish to GitHub Pages.
+Then, I set up CI/CD with GitHub Actions. The workflow is building project and
+publish it as npm-package, after successful publication it triggers a workflow
+in the app repository, that makes build and publish to GitHub Pages.
 
 I also migrated the app from Webpack to Vite, so building became 3 times faster
 and hot-reloads are no longer broken. Vite allows using rollup plugins and

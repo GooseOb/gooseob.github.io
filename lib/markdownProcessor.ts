@@ -1,5 +1,6 @@
-import { remark } from 'remark';
-import html from 'remark-html';
+import { unified } from 'unified';
+import remarkHtml from 'remark-html';
+import remarkParse from 'remark-parse';
 import { readFile } from 'fs/promises';
 import matter from 'gray-matter';
 import path from 'path';
@@ -61,7 +62,7 @@ const resolveCustomComponents: PreprocessReplacer = (text) => {
 						($1, $2) => args[$2] || lackOfComponentArgs($0)
 					);
 				}
-		  )
+			)
 		: text;
 };
 
@@ -112,7 +113,10 @@ type ProjectFilePath<TType extends ProjectType> = [
 ];
 type IndexFilePath = [lang: Lang, name: string];
 
-const remarkProcessor = remark().use(html);
+const remarkProcessor = unified().use(remarkParse).use(
+	// @ts-ignore
+	remarkHtml
+);
 const readMdFile = (pathName: string) => readFile(pathName, 'utf-8');
 export const htmlFromMd = async <TType extends ProjectType>(
 	pathArr: ProjectFilePath<TType> | IndexFilePath
@@ -134,7 +138,9 @@ export const htmlFromMd = async <TType extends ProjectType>(
 		lang
 	);
 
-	const processedContent = await remarkProcessor.process(resolvedContent);
+	const processedContent = String(
+		await remarkProcessor.process(resolvedContent)
+	);
 
 	return {
 		meta: Object.assign(meta, data),

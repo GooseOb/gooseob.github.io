@@ -35,9 +35,8 @@ const getProject = async <TType extends ProjectType>(
 ) => {
 	const data = await htmlFromMd([lang, type, name]);
 	if (type === ProjectType.SITE)
-		(
-			data.meta as ModifiedMetaDataOfType<ProjectType.SITE>
-		).img ||= `/assets/${name}/index.jpg`;
+		(data.meta as ModifiedMetaDataOfType<ProjectType.SITE>).img ||=
+			`/assets/${name}/index.jpg`;
 	return data;
 };
 
