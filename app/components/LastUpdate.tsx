@@ -7,12 +7,10 @@ type Props = {
 	date: Date;
 };
 
-const LastUpdate: FC<Props> = ({ lang, date }) => {
-	return (
-		<div className='md:mx-20'>
-			{dict[lang].lastUpdate}: {date.toLocaleString(lang)}
-		</div>
-	);
-};
+const LatestUpdate: FC<Props> = ({ lang, date }) => (
+	<div className='md:mx-20'>
+		{dict[lang].latestUpdate}: {date.toLocaleString(lang)}
+	</div>
+);
 
-export default LastUpdate;
+export default LatestUpdate;

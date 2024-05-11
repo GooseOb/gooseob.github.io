@@ -36,7 +36,8 @@
 	"git": "Git-black?logo=git",
 
 	"webstorm": "WebStorm-black?logo=webstorm",
-	"vscode": "VSCode-10102b?logo=visualstudiocode",
+	"vscode": "VSCode-10408b?logo=visualstudiocode",
+	"neovim": "NeoVim-10102b?logo=neovim",
 
 	"bash": "Bash-%231a202c?logo=gnubash",
 	"php": "PHP-777BB4?logo=php&logoColor=white",

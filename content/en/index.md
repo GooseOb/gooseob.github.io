@@ -4,6 +4,6 @@
 
 The list of my projects is on the sidebar (or above if you're using phone),
 there are the link to the github repo and the technology stack of a project on
-each page. If there is no stack, the project's written only on JavaScript.
+each page.
 
 [@include](../index.md)

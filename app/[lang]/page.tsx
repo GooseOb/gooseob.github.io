@@ -3,7 +3,7 @@ import { AppParams } from '@/app/[lang]/layout';
 import { useHome } from '@/lib/projects';
 import Content from '@/app/components/Content';
 import ProjectStack from '@/app/components/ProjectStack';
-import LastUpdate from '@/app/components/LastUpdate';
+import LatestUpdate from '@/app/components/LastUpdate';
 
 type Props = {
 	params: AppParams;
@@ -17,7 +17,7 @@ const Home: NextPage<Props> = ({ params }) => {
 			<Content markdownStyleClassName='content-from-markdown-home'>
 				{content}
 			</Content>
-			<LastUpdate lang={params.lang} date={new Date()} />
+			<LatestUpdate lang={params.lang} date={new Date()} />
 			<ProjectStack>{meta.stack}</ProjectStack>
 		</>
 	);

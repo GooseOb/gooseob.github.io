@@ -39,12 +39,14 @@
 		"svajksta-free": {
 			"name": "svajksta-free",
 			"repo": "https://github.com/GooseOb/svajksta-free",
-			"url": "https://greasyfork.org/en/scripts/461064-svajksta-free"
+			"url": "https://greasyfork.org/en/scripts/461064-svajksta-free",
+			"stack": "JavaScript"
 		},
 		"telegram-photo-protection-remover": {
 			"name": "telegram-photo-protection-remover",
 			"repo": "https://github.com/GooseOb/telegram-photo-protection-remover",
-			"url": "https://greasyfork.org/en/scripts/443342-telegram-photo-protection-remover"
+			"url": "https://greasyfork.org/en/scripts/443342-telegram-photo-protection-remover",
+			"stack": "JavaScript"
 		},
 		"yt-defaulter": {
 			"name": "YT-Defaulter",

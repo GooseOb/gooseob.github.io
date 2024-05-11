@@ -35,7 +35,7 @@ ESLint Prettier
 Git
 GitHub Actions
 
-WebStorm VSCode
+WebStorm VSCode NeoVim
 
 @h-2(alsoWorked)
 
