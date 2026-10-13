@@ -113,6 +113,8 @@ type ProjectFilePath<TType extends ProjectType> = [
 ];
 type IndexFilePath = [lang: Lang, name: string];
 
+// @ts-ignore: remark-parse bundles its own unified copy under bun's isolated
+// installs, so the plugin types don't match the top-level Processor type
 const remarkProcessor = unified().use(remarkParse).use(
 	// @ts-ignore
 	remarkHtml
