@@ -4,10 +4,12 @@ import { Replacer } from '@/lib/util';
 type BadgeKey = keyof typeof badges;
 
 // These only match as standalone, case-sensitive words:
-// a generic case-insensitive match would badge every "c" and "make" on the site
+// a generic case-insensitive match would badge every "c" and "make" on the site,
+// and "jest" inside the Polish "jestem" ("I am")
 const specialBadges: Record<string, BadgeKey> = {
 	C: 'c',
-	Make: 'make'
+	Make: 'make',
+	Jest: 'jest'
 };
 
 const generalKeys = Object.keys(badges).filter(
@@ -15,12 +17,12 @@ const generalKeys = Object.keys(badges).filter(
 );
 
 const keywordsRegex = new RegExp(
-	`(?<!http\\S*| \\S+="[^"]+)(${generalKeys.join('|')})`,
+	`(?<!http\\S*| \\S+="[^"]*)(${generalKeys.join('|')})`,
 	'gi'
 );
 
 const specialRegex = new RegExp(
-	`(?<!http\\S*| \\S+="[^"]+)(?<!\\w)(${Object.keys(specialBadges).join('|')})(?!\\w)`,
+	`(?<!http\\S*| \\S+="[^"]*)(?<!\\w)(${Object.keys(specialBadges).join('|')})(?!\\w)`,
 	'g'
 );
 

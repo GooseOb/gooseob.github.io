@@ -10,40 +10,59 @@
 
 @h-1(technologies, 📚)
 
-JavaScript TypeScript HTML5 GraphQL
+@h-2(frontend)
 
-React Redux Redux Toolkit Next.js Vue Svelte SvelteKit TanStack Query
+TypeScript JavaScript HTML CSS SASS SCSS GraphQL
 
-NodeJS Bun tRPC Express.js NestJS
+React Next.js Vue Svelte SvelteKit
 
-@h-2(styles)
+Redux Redux Toolkit TanStack Query
 
-CSS3 SASS SCSS
+@h-2(testing)
+
+Jest Vitest React Testing Library Cypress
+
+@h-2(ui)
 
 TailwindCSS MaterialUI shadcn Storybook
 
-@h-2(builders)
-
-Webpack Vite esbuild Babel
-
-GULP
-
 @h-2(tools)
 
-ESLint Prettier Jest Vitest Cypress React Testing Library
+Webpack Babel Vite esbuild GULP Prettier ESLint
 
-Git
-GitHub Actions GitLab Docker Figma Swagger OpenAPI
+Git GitHub Actions GitLab Docker Figma Swagger OpenAPI
 
 WebStorm VSCode NeoVim
 
-@h-2(alsoWorked)
+@h-2(databases)
 
-Bash PHP MySQL PostgreSQL Prisma Drizzle Oracle MongoDB Redis
+SQL: Oracle PostgreSQL Prisma Drizzle
 
-Markdown Cloudflare AWS Firebase Rust iced Python Java Kotlin
+NoSQL: Redis MongoDB
+
+@h-2(backend)
+
+Cloudflare AWS Firebase
+
+NodeJS Bun tRPC Express.js NestJS
+
+@h-2(standards)
+
+WCAG HTTP Web Sockets REST API SOLID Design patterns
+
+@h-2(methodologies)
+
+Agile Scrum Kanban Test-Driven Development
+
+@h-2(otherTech)
+
+Rust iced Python Java Kotlin Bash
+
+PHP MySQL Markdown
 
 @h-1(stats, 📊)
 
-![GooseOb github stats](https://github-readme-stats.vercel.app/api?username=GooseOb&show_icons=true&theme=ocean_dark)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=GooseOb&layout=compact&theme=ocean_dark)
+![overview](https://gooseob.github.io/GooseOb/overview.svg?v2#gh-dark-mode-only)
+@style(display:flex; flex-wrap:wrap)
+![github stats](https://github-readme-stats.vercel.app/api?username=GooseOb&show_icons=true&theme=ocean_dark)
+![languages](https://gooseob.github.io/GooseOb/languages.svg?v2#gh-dark-mode-only)
