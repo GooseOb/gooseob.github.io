@@ -1,5 +1,5 @@
 'use client';
-import { ChangeEvent, FC } from 'react';
+import { ChangeEvent } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { Lang } from '@/lib/lang';
 
@@ -8,7 +8,7 @@ type Props = {
 	options: JSX.Element[];
 };
 
-const LanguageSelectClient: FC<Props> = ({ value, options }) => {
+const LanguageSelectClient = ({ value, options }: Props) => {
 	const router = useRouter();
 	const pathname = usePathname();
 

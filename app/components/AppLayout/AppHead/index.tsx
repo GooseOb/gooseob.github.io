@@ -1,7 +1,6 @@
-import { FC } from 'react';
 import Favicons from './Favicons';
 
-const Index: FC = () => {
+const Index = () => {
 	return (
 		<head>
 			<Favicons />

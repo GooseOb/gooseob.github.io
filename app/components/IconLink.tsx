@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -14,7 +14,7 @@ type IconLinkProps = {
 	height?: number;
 };
 
-const IconLink: FC<IconLinkProps> = ({
+const IconLink = ({
 	href,
 	src,
 	alt,
@@ -24,7 +24,7 @@ const IconLink: FC<IconLinkProps> = ({
 	imgClassName = 'h-[1.5em] w-[1.5em]',
 	width = 100,
 	height = width
-}) => (
+}: IconLinkProps) => (
 	<div className={className}>
 		{React.createElement(
 			internal ? Link : 'a',

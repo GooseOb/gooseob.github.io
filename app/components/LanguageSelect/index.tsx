@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { Lang, langText } from '@/lib/lang';
 import LanguageSelectClient from '@/app/components/LanguageSelect/client';
 
@@ -12,7 +11,7 @@ const options = langText.map(([value, text]) => (
 	</option>
 ));
 
-const LanguageSelect: FC<Props> = ({ value }) => (
+const LanguageSelect = ({ value }: Props) => (
 	<div className='flex items-center'>
 		<LanguageSelectClient value={value} options={options} />
 	</div>

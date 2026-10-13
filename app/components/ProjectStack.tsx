@@ -1,11 +1,11 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { replaceStackKeywordsByBadges } from '@/lib/replaceKeywordsByBadges';
 
 type Props = {
 	children: string;
 };
 
-const ProjectStack: FC<Props> = ({ children }) => {
+const ProjectStack = ({ children }: Props) => {
 	return (
 		<section
 			aria-label='Technology stack'

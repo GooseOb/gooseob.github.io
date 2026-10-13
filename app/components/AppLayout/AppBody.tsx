@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { AppParams } from '@/app/[lang]/layout';
 import Header from './Header';
 import Nav from './Nav';
@@ -10,7 +10,7 @@ type Props = {
 	params: AppParams;
 };
 
-	const AppBody: FC<Props> = ({ children, params: { lang } }) => {
+	const AppBody = ({ children, params: { lang } }: Props) => {
 	const homeHref: `/${Lang}/` = `/${lang}/`;
 
 	return (

@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import Image from 'next/image';
 import GithubIcon from '@/app/components/GithubIcon';
 
@@ -11,14 +11,14 @@ type Props = {
 	imgLinkHref?: string;
 };
 
-const ProjectHero: FC<Props> = ({
+const ProjectHero = ({
 	type,
 	name,
 	repo,
 	actions,
 	img,
 	imgLinkHref
-}) => {
+}: Props) => {
 	const heroImage = img ? (
 		<Image
 			src={img}

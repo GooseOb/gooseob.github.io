@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import Link from 'next/link';
 import LanguageSelect from '@/app/components/LanguageSelect';
 import ThemeToggle from '@/app/components/ThemeToggle';
@@ -9,7 +8,7 @@ type Props = {
 	lang: Lang;
 };
 
-const Header: FC<Props> = ({ homeHref, lang }) => {
+const Header = ({ homeHref, lang }: Props) => {
 	return (
 		<header className='sticky top-0 z-20 col-span-1 flex h-16 items-center gap-3 border-b border-white/10 bg-primary-light px-4 shadow-lg md:col-span-2 md:px-6 dark:bg-primary-dark'>
 			<h1 className='text-xl font-semibold tracking-tight select-none md:text-2xl'>

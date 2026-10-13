@@ -1,11 +1,11 @@
-import { FC, ReactElement, ReactNode } from 'react';
+import { ReactElement, ReactNode } from 'react';
 import './globals.css';
 
 type Props = {
 	children: ReactNode;
 };
 
-const Layout: FC<Props> = ({ children }) => {
+const Layout = ({ children }: Props) => {
 	return children as ReactElement;
 };
 

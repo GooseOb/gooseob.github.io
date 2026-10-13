@@ -1,10 +1,10 @@
 'use client';
-import { FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const getInitialTheme = () =>
 	document?.documentElement.classList.contains('dark') ? 'dark' : 'light';
 
-const ThemeToggle: FC = () => {
+const ThemeToggle = () => {
 	const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
 	useEffect(() => {

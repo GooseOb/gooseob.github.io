@@ -1,8 +1,6 @@
-import { FC } from 'react';
-
 const EMAIL = 'edvin.dulko1@gmail.com';
 
-const Footer: FC = () => {
+const Footer = () => {
 	const year = new Date().getFullYear();
 	return (
 		<footer className='col-span-1 border-t border-white/10 bg-primary-light text-white md:col-span-2 dark:bg-primary-dark'>

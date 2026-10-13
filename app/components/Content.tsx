@@ -1,11 +1,9 @@
-import { FC } from 'react';
-
 type Props = {
 	children: string;
 	markdownStyleClassName?: string;
 };
 
-const Content: FC<Props> = ({ children, markdownStyleClassName = '' }) => {
+const Content = ({ children, markdownStyleClassName = '' }: Props) => {
 	return (
 		<div
 			className={

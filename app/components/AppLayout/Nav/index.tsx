@@ -1,13 +1,12 @@
 import Details from './Details';
 import { Lang } from '@/lib/lang';
 import { getProjectSections } from '@/lib/projectNames';
-import { FC } from 'react';
 
 type Props = {
 	lang: Lang;
 };
 
-const Nav: FC<Props> = ({ lang }) => {
+const Nav = ({ lang }: Props) => {
 	const sections = getProjectSections();
 
 	return (

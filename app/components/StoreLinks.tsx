@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import IconLink from './IconLink';
 
 const storeIcons: [RegExp, string, string, string?][] = [
@@ -21,7 +20,7 @@ const storeIcons: [RegExp, string, string, string?][] = [
 
 type Props = { urls: string[] };
 
-const StoreLinks: FC<Props> = ({ urls }) => (
+const StoreLinks = ({ urls }: Props) => (
 	<span className='inline-flex flex-wrap items-center gap-3'>
 		{urls.map((href) => {
 			const hit = storeIcons.find(([re]) => re.test(new URL(href).hostname));

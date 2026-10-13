@@ -1,5 +1,5 @@
 'use client';
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ProjectNavItem } from '@/lib/projectNames';
@@ -9,7 +9,7 @@ type Props = { summary: string; path: string; list: ProjectNavItem[] };
 const baseItemClassName =
 	'block rounded-lg px-3 py-2 text-sm transition-colors hover:bg-hoversecondary-light hover:no-underline dark:hover:bg-hoversecondary-dark';
 
-const Details: FC<Props> = ({ summary, path, list }) => {
+const Details = ({ summary, path, list }: Props) => {
 	const pathname = usePathname();
 	const isSectionActive = pathname?.startsWith(path) ?? false;
 	const [open, setOpen] = useState(true);

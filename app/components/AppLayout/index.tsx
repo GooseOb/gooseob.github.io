@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import AppHead from './AppHead';
 import AppBody from './AppBody';
 import { AppParams } from '@/app/[lang]/layout';
@@ -8,7 +8,7 @@ type Props = {
 	children: ReactNode;
 };
 
-const AppLayout: FC<Props> = ({ params, children }) => {
+const AppLayout = ({ params, children }: Props) => {
 	return (
 		<html lang={params.lang}>
 			<AppHead />
