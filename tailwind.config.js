@@ -2,6 +2,7 @@
 import colors from 'tailwindcss/colors';
 
 module.exports = {
+	darkMode: 'class',
 	content: [
 		'./pages/**/*.{js,ts,jsx,tsx}',
 		'./components/**/*.{js,ts,jsx,tsx}',
@@ -16,28 +17,28 @@ module.exports = {
 			},
 			colors: {
 				primary: {
-					dark: colors.purple['800'],
-					light: colors.purple['800']
+					dark: colors.purple['950'],
+					light: colors.purple['900']
 				},
 				secondary: {
-					dark: colors.gray['800'],
-					light: colors.orange['200']
+					dark: colors.zinc['900'],
+					light: colors.white
 				},
 				hoversecondary: {
-					dark: colors.gray['700'],
-					light: colors.orange['300']
+					dark: colors.zinc['800'],
+					light: colors.violet['100']
 				},
 				neutral: {
-					dark: colors.black,
-					light: colors.yellow['50']
+					dark: colors.zinc['950'],
+					light: colors.slate['50']
 				},
 				link: {
-					dark: colors.blue['300'],
-					light: colors.green['700']
+					dark: colors.purple['300'],
+					light: colors.purple['700']
 				},
 				hoverlink: {
-					dark: colors.purple['300'],
-					light: colors.red['600']
+					dark: colors.purple['200'],
+					light: colors.purple['900']
 				}
 			}
 		}

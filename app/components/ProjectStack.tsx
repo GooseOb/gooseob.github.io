@@ -7,8 +7,11 @@ type Props = {
 
 const ProjectStack: FC<Props> = ({ children }) => {
 	return (
-		<div className='relative md:mx-20 p-2 bg-secondary-dark text-white'>
-			<div className='absolute top-2 right-2 text-gray-400 font-medium'>
+		<section
+			aria-label='Technology stack'
+			className='relative mt-6 rounded-2xl border border-slate-200 bg-white p-4 pt-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100'
+		>
+			<div className='absolute top-3 right-4 text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-zinc-500'>
 				Stack
 			</div>
 			<div
@@ -17,7 +20,7 @@ const ProjectStack: FC<Props> = ({ children }) => {
 					__html: replaceStackKeywordsByBadges(children)
 				}}
 			/>
-		</div>
+		</section>
 	);
 };
 

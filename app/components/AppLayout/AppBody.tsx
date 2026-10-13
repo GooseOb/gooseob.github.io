@@ -10,15 +10,21 @@ type Props = {
 	params: AppParams;
 };
 
-const AppBody: FC<Props> = ({ children, params: { lang } }) => {
+	const AppBody: FC<Props> = ({ children, params: { lang } }) => {
 	const homeHref: `/${Lang}/` = `/${lang}/`;
 
 	return (
-		<body className='h-max md:h-screen grid grid-cols-[1fr] md:grid-cols-[1fr_4fr] grid-rows-[auto] md:grid-rows-[2fr_20fr_1fr] bg-primary-light dark:bg-primary-dark'>
+		<body className='grid min-h-screen grid-cols-1 grid-rows-[auto_1fr_auto] bg-neutral-light text-slate-900 antialiased md:grid-cols-[280px_1fr] dark:bg-neutral-dark dark:text-zinc-100'>
+			<a href='#main' className='skip-link'>
+				Skip to content
+			</a>
 			<Header lang={lang} homeHref={homeHref} />
 			<Nav lang={lang} />
-			<main className='overflow-auto bg-neutral-light dark:bg-neutral-dark p-5 col-span-2 md:col-span-1'>
-				{children}
+			<main
+				id='main'
+				className='min-w-0 bg-neutral-light px-4 py-6 sm:px-6 md:col-start-2 md:px-10 md:py-8 dark:bg-neutral-dark'
+			>
+				<div className='mx-auto w-full max-w-4xl'>{children}</div>
 			</main>
 			<Footer />
 		</body>

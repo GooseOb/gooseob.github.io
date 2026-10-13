@@ -22,7 +22,8 @@ const LanguageSelectClient: FC<Props> = ({ value, options }) => {
 		<select
 			defaultValue={value}
 			onChange={onChange}
-			className='rounded-xl p-2 duration-300 bg-secondary-light dark:bg-secondary-dark hover:bg-hoversecondary-light dark:hover:bg-hoversecondary-dark'
+			aria-label='Language'
+			className='rounded-lg border border-white/20 bg-white/10 px-2 py-1.5 text-sm font-medium text-white transition-colors hover:bg-white/20 [&>option]:bg-white [&>option]:text-slate-900 dark:[&>option]:bg-zinc-900 dark:[&>option]:text-zinc-100'
 		>
 			{options}
 		</select>

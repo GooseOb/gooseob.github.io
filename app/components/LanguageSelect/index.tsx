@@ -13,7 +13,7 @@ const options = langText.map(([value, text]) => (
 ));
 
 const LanguageSelect: FC<Props> = ({ value }) => (
-	<div className='my-auto mx-4'>
+	<div className='flex items-center'>
 		<LanguageSelectClient value={value} options={options} />
 	</div>
 );

@@ -11,15 +11,19 @@ const Nav: FC<Props> = ({ lang }) => {
 	const sections = getProjectSections();
 
 	return (
-		<nav className='bg-secondary-light dark:bg-secondary-dark col-span-2 md:col-span-1'>
-			<ul>
+		<nav
+			aria-label='Projects'
+			className='col-span-1 border-b border-slate-200 bg-secondary-light md:sticky md:top-16 md:max-h-[calc(100vh-4rem)] md:overflow-y-auto md:border-b-0 md:border-r dark:border-zinc-800 dark:bg-secondary-dark'
+		>
+			<ul className='flex flex-row gap-1 overflow-x-auto p-2 md:flex-col md:overflow-visible'>
 				{sections.map(({ type, list }) => (
-					<Details
-						summary={type}
-						path={`/${lang}/${type}/`}
-						list={list}
-						key={type}
-					/>
+					<li key={type} className='min-w-[180px] flex-1 md:min-w-0'>
+						<Details
+							summary={type}
+							path={`/${lang}/${type}/`}
+							list={list}
+						/>
+					</li>
 				))}
 			</ul>
 		</nav>

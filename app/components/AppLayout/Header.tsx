@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import Link from 'next/link';
 import LanguageSelect from '@/app/components/LanguageSelect';
+import ThemeToggle from '@/app/components/ThemeToggle';
 import { Lang } from '@/lib/lang';
 
 type Props = {
@@ -8,21 +9,20 @@ type Props = {
 	lang: Lang;
 };
 
-const svgClassName =
-	'fill-white dark:fill-white hover:fill-hoverlink-light dark:hover:fill-hoverlink-dark';
-
 const Header: FC<Props> = ({ homeHref, lang }) => {
 	return (
-		<header className='p-3 flex h-[100%] col-span-2 shadow-[#0006] shadow-2xl z-10'>
-			<h1 className='mx-auto md:ml-32 my-auto text-2xl md:text-3xl font-medium select-none'>
+		<header className='sticky top-0 z-20 col-span-1 flex h-16 items-center gap-3 border-b border-white/10 bg-primary-light px-4 shadow-lg md:col-span-2 md:px-6 dark:bg-primary-dark'>
+			<h1 className='text-xl font-semibold tracking-tight select-none md:text-2xl'>
 				<Link
 					href={homeHref}
-					className={'flex items-center gap-3 text-white ' + svgClassName}
+					className='flex items-center gap-3 rounded-lg fill-white text-white no-underline transition-colors hover:fill-purple-200 hover:text-purple-200'
+					aria-label="Go to homepage — GooseOb's pages"
 				>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						viewBox='0 0 32 32'
-						className='w-[2em] h-[2em]'
+						className='h-9 w-9 shrink-0'
+						aria-hidden='true'
 					>
 						<style>
 							{
@@ -37,7 +37,10 @@ const Header: FC<Props> = ({ homeHref, lang }) => {
 					<span>GooseObʼs pages</span>
 				</Link>
 			</h1>
-			<LanguageSelect value={lang} />
+			<div className='ml-auto flex items-center gap-2'>
+				<LanguageSelect value={lang} />
+				<ThemeToggle />
+			</div>
 		</header>
 	);
 };

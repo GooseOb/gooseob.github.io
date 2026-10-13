@@ -2,15 +2,12 @@ import { FC } from 'react';
 import { Lang } from '@/lib/lang';
 import dict from '@/content/dict.json';
 
-type Props = {
-	lang: Lang;
-	date: Date;
-};
+type Props = { lang: Lang; date: Date };
 
 const LatestUpdate: FC<Props> = ({ lang, date }) => (
-	<div className='md:mx-20'>
+	<p className='mb-4 text-sm text-slate-500 dark:text-zinc-400'>
 		{dict[lang].latestUpdate}: {date.toLocaleString(lang)}
-	</div>
+	</p>
 );
 
 export default LatestUpdate;

@@ -22,37 +22,37 @@ const storeIcons: [RegExp, string, string, string?][] = [
 type Props = { urls: string[] };
 
 const StoreLinks: FC<Props> = ({ urls }) => (
-	<>
+	<span className='inline-flex flex-wrap items-center gap-3'>
 		{urls.map((href) => {
 			const hit = storeIcons.find(([re]) => re.test(new URL(href).hostname));
 			if (!hit) {
 				return (
-					<a key={href} className='underline mx-3' href={href}>
+					<a key={href} className='break-all text-sm' href={href}>
 						{href}
 					</a>
 				);
 			}
 			const [, src, alt, darkSrc] = hit;
 			return darkSrc ? (
-				<div className='contents mx-1' key={href}>
+				<span className='contents' key={href}>
 					<IconLink
 						href={href}
 						src={darkSrc}
 						alt={alt}
-						className='hidden dark:inline-block'
+						className='hidden dark:inline-flex'
 					/>
 					<IconLink
 						href={href}
 						src={src}
 						alt={alt}
-						className='inline-block dark:hidden'
+						className='inline-flex dark:hidden'
 					/>
-				</div>
+				</span>
 			) : (
 				<IconLink key={href} href={href} src={src} alt={alt} />
 			);
 		})}
-	</>
+	</span>
 );
 
 export default StoreLinks;

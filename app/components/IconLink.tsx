@@ -19,9 +19,9 @@ const IconLink: FC<IconLinkProps> = ({
 	src,
 	alt,
 	internal = false,
-	className = 'mx-3',
-	linkClassName = 'opacity-70 hover:opacity-100 select-none',
-	imgClassName = 'h-[1em] w-[1em]',
+	className = 'inline-flex',
+	linkClassName = 'inline-flex rounded-lg opacity-70 transition-opacity hover:opacity-100 select-none',
+	imgClassName = 'h-[1.5em] w-[1.5em]',
 	width = 100,
 	height = width
 }) => (
