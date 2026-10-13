@@ -10,38 +10,38 @@
 
 @h-1(technologies, 📚)
 
-JavaScript TypeScript HTML5
+JavaScript TypeScript HTML5 GraphQL
 
-React Redux Redux Toolkit Next.js
+React Redux Redux Toolkit Next.js Vue Svelte SvelteKit TanStack Query
 
-NodeJS Bun
+NodeJS Bun tRPC Express.js NestJS
 
 @h-2(styles)
 
-CSS3 SASS
+CSS3 SASS SCSS
 
-TailwindCSS MaterialUI
+TailwindCSS MaterialUI shadcn Storybook
 
 @h-2(builders)
 
-Webpack Vite
+Webpack Vite esbuild Babel
 
 GULP
 
 @h-2(tools)
 
-ESLint Prettier
+ESLint Prettier Jest Vitest Cypress React Testing Library
 
 Git
-GitHub Actions
+GitHub Actions GitLab Docker Figma Swagger OpenAPI
 
 WebStorm VSCode NeoVim
 
 @h-2(alsoWorked)
 
-Bash PHP MySQL
+Bash PHP MySQL PostgreSQL Prisma Drizzle Oracle MongoDB Redis
 
-Markdown
+Markdown Cloudflare AWS Firebase Rust iced Python Java Kotlin
 
 @h-1(stats, 📊)
 
