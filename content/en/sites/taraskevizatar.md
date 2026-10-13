@@ -60,17 +60,19 @@ that interacts with this API. I added alias `@api` for imports and if the build
 is in the api mode, `@api` imports fetch function instead of function with
 taraskevization logic on frontend.
 
-After a while, someone asked me in issues on GitHub to move logic of conversion
-to an npm-package. And I moved this with json-generation to another repository.
-For building I chose tsup, it's simple builder, that allows use esbuild plugins.
-It was simpler to create a plugin for json-generation with esbuild than with
-Webpack. And that's it, the
-[package](https://www.npmjs.com/package/taraskevizer) is on npm.
-
-Then, I set up CI/CD with GitHub Actions. The workflow is building project and
-publish it as npm-package, after successful publication it triggers a workflow
-in the app repository, that makes build and publish to GitHub Pages.
+The conversion logic lives in the
+[taraskevizer package](/en/packages/taraskevizer), the app only renders the UI
+around it.
 
 I also migrated the app from Webpack to Vite, so building became 3 times faster
 and hot-reloads are no longer broken. Vite allows using rollup plugins and
 writing it is even simpler than esbuild one.
+
+Then, to make it easier to add new features, I redisigned the app once again,
+this time rewriting it in Svelte (SvelteKit) with Server-Side Generation. Old UI
+stayed reachable and you can navigate to it by clicking the link "Перайсьці да
+старой вэрсіі".
+
+The new version provided a better file conversion experience, making it possible
+to upload several files, preview the output, download them all in a zip or as
+separate files.

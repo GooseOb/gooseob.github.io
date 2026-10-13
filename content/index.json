@@ -12,7 +12,7 @@
 			"type": "pet",
 			"repo": "https://github.com/GooseOb/passports",
 			"url": "https://gooseob.github.io/passports/",
-			"stack": "HTML, JavaScript -> TypeScript, GULP -> Vite, SASS; google apps scripts (JavaScript with their own API)"
+			"stack": "HTML, JavaScript -> TypeScript, GULP -> Vite, SASS; Google Apps Script (JavaScript with their own API)"
 		},
 		"shop-app": {
 			"name": "shop-app",
@@ -26,13 +26,60 @@
 			"type": "pet",
 			"repo": "https://github.com/GooseOb/taraskevizatar",
 			"url": "https://gooseob.github.io/taraskevizatar/",
-			"stack": "HTML, JavaScript -> TypeScript, GULP -> Webpack -> Vite, SASS; tsup"
+			"stack": "HTML, JavaScript -> TypeScript, VanillaJS -> Svelte (SvelteKit), GULP -> Webpack -> Vite, SASS"
 		},
 		"php-spi": {
 			"name": "php-spi",
 			"type": "university",
 			"repo": "https://github.com/GooseOb/php-spi",
 			"stack": "PHP, MySQL; HTML, CSS"
+		},
+		"seminar-app": {
+			"name": "seminar-app",
+			"type": "university",
+			"repo": "https://github.com/GooseOb/seminar-app",
+			"url": "https://seminar.gooseob.workers.dev",
+			"stack": "TypeScript, Svelte, SvelteKit, tRPC, Drizzle, PostgreSQL, Cloudflare; Vite, ESLint, Prettier, Bun; pdf.js, Paraglide, Neon"
+		},
+		"web-arkanoid-3d": {
+			"name": "web-arkanoid-3d",
+			"type": "university",
+			"repo": "https://github.com/GooseOb/web-arkanoid-3d",
+			"url": "https://gooseob.github.io/web-arkanoid-3d/",
+			"stack": "TypeScript, HTML, CSS, Three.js, Vite; Bun, GitHub Actions, GitHub Pages"
+		}
+	},
+	"apps": {
+		"music_plr": {
+			"name": "music_plr",
+			"type": "pet",
+			"repo": "https://github.com/GooseOb/music_plr",
+			"urls": [
+				"https://crates.io/crates/goosemusic",
+				"https://github.com/GooseOb/music_plr/releases"
+			],
+			"stack": "Rust, Slint -> iced; Tokio, yt-dlp, Rodio, Symphonia"
+		},
+		"reverso-linux": {
+			"name": "reverso-linux",
+			"type": "pet",
+			"repo": "https://github.com/GooseOb/reverso-linux",
+			"urls": ["https://github.com/GooseOb/reverso-linux/releases"],
+			"stack": "C, GTK 3, libcurl, json-c; Make, Bash, GitHub Actions"
+		}
+	},
+	"packages": {
+		"taraskevizer": {
+			"name": "taraskevizer",
+			"type": "pet",
+			"repo": "https://github.com/GooseOb/taraskevizer",
+			"urls": [
+				"https://www.npmjs.com/package/taraskevizer",
+				"https://crates.io/crates/taraskevizer",
+				"https://crates.io/crates/tarask",
+				"https://gooseob.github.io/taraskevizer/"
+			],
+			"stack": "TypeScript, Rust, esbuild; WASM, Bun, GitHub Actions"
 		}
 	},
 	"userscripts": {

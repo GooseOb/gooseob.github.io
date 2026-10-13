@@ -1,5 +1,7 @@
 import { AppParams } from '@/app/[lang]/layout';
 import {
+	getApps,
+	getPackages,
 	getSites,
 	getUserscripts,
 	ProjectNamesGetter
@@ -18,6 +20,9 @@ export const generateStaticSiteParams =
 	getStaticProjectParamsGenerator(getSites);
 export const generateStaticUserscriptParams =
 	getStaticProjectParamsGenerator(getUserscripts);
+export const generateStaticAppParams = getStaticProjectParamsGenerator(getApps);
+export const generateStaticPackageParams =
+	getStaticProjectParamsGenerator(getPackages);
 
 type ProjectParams = AppParams & {
 	name: string;

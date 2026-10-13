@@ -10,6 +10,10 @@ export const getSites: ProjectNamesGetter = () =>
 	getProjectsByType(ProjectType.SITE);
 export const getUserscripts: ProjectNamesGetter = () =>
 	getProjectsByType(ProjectType.USERSCRIPT);
+export const getApps: ProjectNamesGetter = () =>
+	getProjectsByType(ProjectType.APP);
+export const getPackages: ProjectNamesGetter = () =>
+	getProjectsByType(ProjectType.PACKAGE);
 
 export type ProjectsData = {
 	type: ProjectType;

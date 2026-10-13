@@ -31,7 +31,7 @@ the sheet of the form results to the passport sheet (one sheet per passport)
 like I did in Photoshop but faster. Then I wanted to even more decrease time of
 issuing passports, so I began using macros and found out that it's creating
 scripts based on my actions. It interested me and I started to learn about
-google apps scripts and then about JavaScript. I created the script doing all my
+google apps script and then about JavaScript. I created the script doing all my
 job for me, it was even making requests to API of social network VK to get the
 id of the user. Later it also started to send messages with a link to the
 passport in pm.

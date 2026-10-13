@@ -1,15 +1,10 @@
 import { FC } from 'react';
 import IconLink from '@/app/components/IconLink';
 
-type Props = {
-	repo: string;
-};
+type Props = { repo: string };
 
 const GithubIcon: FC<Props> = ({ repo }) => {
-	const commonProps = {
-		href: repo,
-		alt: 'github repo'
-	};
+	const commonProps = { href: repo, alt: 'github repo' };
 
 	return (
 		<div className='mx-3'>

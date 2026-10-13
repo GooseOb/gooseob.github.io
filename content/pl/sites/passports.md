@@ -31,7 +31,7 @@ arkusza wyników formularza do arkusza paszportu (jeden arkusz na paszport)
 podobnie jak robiłem to w Photoshopie, ale szybciej. Potem chciałem jeszcze
 bardziej skrócić czas wydawania paszportów, więc zacząłem używać makr i okazało
 się, że to tworzy skrypty na podstawie moich działań. To mnie zainteresowało i
-zacząłem poznawać skrypty google apps, a potem JavaScript. Stworzyłem skrypt
+zacząłem poznawać google apps script, a potem JavaScript. Stworzyłem skrypt
 wykonujący całą moją pracę za mnie, nawet robił zapytania do API portalu
 społecznościowego VK aby uzyskać id użytkownika. Później zaczął również wysyłać
 wiadomości z linkiem do paszportu w wiadomości prywatne.

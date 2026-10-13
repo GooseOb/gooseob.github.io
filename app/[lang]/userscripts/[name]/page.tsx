@@ -11,6 +11,8 @@ const UserscriptPage: ProjectPage = ({ params }) => {
 	return (
 		<div>
 			<div className='mb-5 text-5xl font-medium text-center [&>*]:inline-block'>
+				<GithubIcon repo={meta.repo} />
+				<h1>{meta.name}</h1>
 				{meta.url && (
 					<IconLink
 						href={meta.url}
@@ -18,8 +20,6 @@ const UserscriptPage: ProjectPage = ({ params }) => {
 						src='/assets/greasyfork.png'
 					/>
 				)}
-				<h1>{meta.name}</h1>
-				<GithubIcon repo={meta.repo} />
 			</div>
 			<Content>{content}</Content>
 			{meta.stack && <ProjectStack>{meta.stack}</ProjectStack>}
