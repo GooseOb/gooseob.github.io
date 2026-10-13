@@ -11,6 +11,7 @@
 			"name": "passports",
 			"type": "pet",
 			"repo": "https://github.com/GooseOb/passports",
+			"badge": "html",
 			"url": "https://gooseob.github.io/passports/",
 			"stack": "HTML, JavaScript -> TypeScript, GULP -> Vite, SASS; Google Apps Script (JavaScript with their own API)"
 		},
@@ -18,6 +19,7 @@
 			"name": "shop-app",
 			"type": "training",
 			"repo": "https://github.com/GooseOb/shop-app",
+			"badge": "typescript",
 			"url": "https://gooseob.github.io/shop-app/",
 			"stack": "TypeScript, React, Redux Toolkit, MaterialUI, SASS (modules)"
 		},
@@ -25,6 +27,7 @@
 			"name": "taraskevizatar",
 			"type": "pet",
 			"repo": "https://github.com/GooseOb/taraskevizatar",
+			"badge": "svelte",
 			"url": "https://gooseob.github.io/taraskevizatar/",
 			"stack": "HTML, JavaScript -> TypeScript, VanillaJS -> Svelte (SvelteKit), GULP -> Webpack -> Vite, SASS"
 		},
@@ -32,12 +35,14 @@
 			"name": "php-spi",
 			"type": "university",
 			"repo": "https://github.com/GooseOb/php-spi",
+			"badge": "php",
 			"stack": "PHP, MySQL; HTML, CSS"
 		},
 		"seminar-app": {
 			"name": "seminar-app",
 			"type": "university",
 			"repo": "https://github.com/GooseOb/seminar-app",
+			"badge": "svelte",
 			"url": "https://seminar.gooseob.workers.dev",
 			"stack": "TypeScript, Svelte, SvelteKit, tRPC, Drizzle, PostgreSQL, Cloudflare; Vite, ESLint, Prettier, Bun; pdf.js, Paraglide, Neon"
 		},
@@ -45,6 +50,7 @@
 			"name": "web-arkanoid-3d",
 			"type": "university",
 			"repo": "https://github.com/GooseOb/web-arkanoid-3d",
+			"badge": "three.js",
 			"url": "https://gooseob.github.io/web-arkanoid-3d/",
 			"stack": "TypeScript, HTML, CSS, Three.js, Vite; Bun, GitHub Actions, GitHub Pages"
 		}
@@ -54,6 +60,7 @@
 			"name": "music_plr",
 			"type": "pet",
 			"repo": "https://github.com/GooseOb/music_plr",
+			"badge": "rust",
 			"urls": [
 				"https://crates.io/crates/goosemusic",
 				"https://github.com/GooseOb/music_plr/releases"
@@ -64,6 +71,7 @@
 			"name": "reverso-linux",
 			"type": "pet",
 			"repo": "https://github.com/GooseOb/reverso-linux",
+			"badge": "c",
 			"urls": ["https://github.com/GooseOb/reverso-linux/releases"],
 			"stack": "C, GTK 3, libcurl, json-c; Make, Bash, GitHub Actions"
 		}
@@ -73,6 +81,7 @@
 			"name": "taraskevizer",
 			"type": "pet",
 			"repo": "https://github.com/GooseOb/taraskevizer",
+			"badge": "rust",
 			"urls": [
 				"https://www.npmjs.com/package/taraskevizer",
 				"https://crates.io/crates/taraskevizer",
@@ -86,24 +95,28 @@
 		"svajksta-free": {
 			"name": "svajksta-free",
 			"repo": "https://github.com/GooseOb/svajksta-free",
+			"badge": "javascript",
 			"url": "https://greasyfork.org/en/scripts/461064-svajksta-free",
 			"stack": "JavaScript"
 		},
 		"telegram-photo-protection-remover": {
 			"name": "telegram-photo-protection-remover",
 			"repo": "https://github.com/GooseOb/telegram-photo-protection-remover",
+			"badge": "javascript",
 			"url": "https://greasyfork.org/en/scripts/443342-telegram-photo-protection-remover",
 			"stack": "JavaScript"
 		},
 		"yt-defaulter": {
 			"name": "YT-Defaulter",
 			"repo": "https://github.com/GooseOb/YT-Defaulter",
+			"badge": "typescript",
 			"url": "https://greasyfork.org/en/scripts/454696-youtube-defaulter",
 			"stack": "JavaScript -> TypeScript, CSS, GULP -> Bun"
 		},
 		"usos-dark": {
 			"name": "usos-dark",
 			"repo": "https://github.com/GooseOb/usos-dark",
+			"badge": "typescript",
 			"url": "https://greasyfork.org/en/scripts/466537-usos-dark-mode",
 			"stack": "TypeScript, CSS, GULP -> Bun"
 		}
