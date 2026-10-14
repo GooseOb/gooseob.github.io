@@ -11,8 +11,6 @@ to MP3. Local files (MP3, FLAC, WAV, OGG, M4A, AAC, OPUS, WMA) play too, with
 playlists, queue with Up Next and Recently Played tabs, split panes and drag and
 drop between views.
 
-![main view](@/index.jpg)
-
 The lyrics view shows synced lines with click-to-seek from free providers,
 Genius annotations with translations, and our own editable lyrics per track.
 With an OpenAI-compatible server or local Ollama we can translate the active

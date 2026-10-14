@@ -11,8 +11,6 @@ się je pobierać do MP3. Pliki lokalne (MP3, FLAC, WAV, OGG, M4A, AAC, OPUS, WM
 też grają, są playlisty, kolejka z zakładkami Następne i Ostatnio słuchane,
 split-panele i drag and drop między widokami.
 
-![główny widok](@/index.jpg)
-
 Widok tekstów pokazuje zsynchronizowane linijki z klikaniem do przewijania od
 darmowych dostawców, adnotacje Genius z tłumaczeniami i własne edytowalne teksty
 do każdego utworu. Z serwerem kompatybilnym z OpenAI albo lokalną Ollamą aktywny

@@ -11,8 +11,6 @@ Do krótkich fraz pokazuje opcje tłumaczenia z częstościami jako przyciski. K
 opcji pokazuje przykłady użycia obok siebie, źródło z tłumaczeniem. Długi tekst
 pokazuje top-tłumaczenia od razu.
 
-![główne okno](@/index.jpg)
-
 Podpiąłem go pod Win+R w Hyprland, więc każde zaznaczenie tłumaczy się jednym
 skrótem. W releaseach leży tarball z binarką i jest PKGBUILD do AUR.
 

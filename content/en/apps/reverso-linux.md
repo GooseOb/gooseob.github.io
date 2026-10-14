@@ -11,8 +11,6 @@ For short phrases it shows translation options with frequency counts as toggle
 buttons. Clicking an option shows usage examples side by side, source with
 translation. Long text shows the top translations directly.
 
-![main window](@/index.jpg)
-
 I bind it to Win+R in Hyprland so any selection translates with one shortcut.
 Releases ship a tarball with the binary, and there is a PKGBUILD for the AUR.
 

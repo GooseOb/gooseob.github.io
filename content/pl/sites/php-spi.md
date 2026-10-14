@@ -7,8 +7,6 @@ projekt ma backend i nie mogę zadeployić tego do github pages
 
 Routy są obsługiwane przez pliki .htaccess i index.php.
 
-![strona domowa](@/index.jpg)
-
 Strona bazy danych. Tutaj możemy zobaczyć identyfikator grantu, datę,
 grantodawcę, grantobiorcę i kwotę pieniędzy. ![strona bazy danych](@/db.jpg)
 

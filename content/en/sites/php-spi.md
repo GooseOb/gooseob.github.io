@@ -7,8 +7,6 @@ it has backend and I can't deploy this with github pages.
 
 Routes are served by the .htaccess and the index.php files.
 
-![home page](@/index.jpg)
-
 The database page. Here we can see the grant id, date, grantor, grantee and
 amount of money. ![database page](@/db.jpg)
 
