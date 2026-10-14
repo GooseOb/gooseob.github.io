@@ -59,7 +59,7 @@ const Details = ({ summary, path, list }: Props) => {
 										src={badgeSrc}
 										alt={badgeAlt || name}
 										loading='lazy'
-										className='inline-block h-[1.4em] max-w-full align-middle'
+										className='inline-block h-[1.6em] max-w-full align-middle'
 									/>
 								) : (
 									<span className='break-words'>{name}</span>
