@@ -20,12 +20,12 @@ const generalKeys = Object.keys(badges)
 	.map(escapeRegExp);
 
 const keywordsRegex = new RegExp(
-	`(?<!http\\S*| \\S+="[^"]*)(?<!\\w)(${generalKeys.join('|')})(?!\\w)`,
+	`(?<!http\\S*| \\S+="[^"]*)(?<!\\w)(?<!\\\\)(${generalKeys.join('|')})(?!\\w)`,
 	'gi'
 );
 
 const specialRegex = new RegExp(
-	`(?<!http\\S*| \\S+="[^"]*)(?<!\\w)(${Object.keys(specialBadges).join('|')})(?!\\w)`,
+	`(?<!http\\S*| \\S+="[^"]*)(?<!\\w)(?<!\\\\)(${Object.keys(specialBadges).join('|')})(?!\\w)`,
 	'g'
 );
 
@@ -36,8 +36,24 @@ const toBadge = ($0: string) =>
 
 const codeSegmentRegex = /(<pre[\s\S]*?<\/pre>|<code[\s\S]*?<\/code>)/g;
 
+// A backslash escapes a badge keyword: `\Jest` renders as plain `Jest`.
+// Case-insensitive so `\jest`, `\c` and `\make` don't leave a stray backslash
+// even though their lowercase forms never become badges on their own.
+const unescapeRegex = new RegExp(
+	`(?<!http\\S*| \\S+="[^"]*)\\\\(${[
+		...generalKeys,
+		...Object.keys(specialBadges).map(escapeRegExp)
+	]
+		.sort((a, b) => b.length - a.length)
+		.join('|')})`,
+	'gi'
+);
+
 const replaceOutsideCodeBlocks = (text: string) =>
-	text.replace(keywordsRegex, toBadge).replace(specialRegex, toBadge);
+	text
+		.replace(keywordsRegex, toBadge)
+		.replace(specialRegex, toBadge)
+		.replace(unescapeRegex, '$1');
 
 const groupBy: Replacer<[string]> = (text, separator) =>
 	`<div>${text.split(separator).join('</div><div>')}</div>`.replace(

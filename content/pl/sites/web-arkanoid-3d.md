@@ -2,9 +2,9 @@
 
 ### Content
 
-Jest plansza z tęczowymi rzędami bloków, paletka i świecąca kulka. Kamera podąża
-za kulką. Kulka odbija się od paletki w zależności od tego, o którą jej część
-uderzy, a każdy zniszczony blok robi ją trochę szybszą.
+\Jest plansza z tęczowymi rzędami bloków, paletka i świecąca kulka. Kamera
+podąża za kulką. Kulka odbija się od paletki w zależności od tego, o którą jej
+część uderzy, a każdy zniszczony blok robi ją trochę szybszą.
 
 Asteroidy wlatują spoza ścian i niszczą bloki przy kontakcie. Zbite bloki
 wybuchają świecącymi cząsteczkami z dźwiękiem pozycyjnym: odbicie, tłuczenie

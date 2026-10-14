@@ -9,7 +9,7 @@ paszport różni się od poprzedniego.
 Przewracanie stron jest dostępne poprzez kliknięcie przycisków ze stzałkami,
 kliknięcie stron i naciskanie przycisków strzałek na klawiaturze.
 
-Jest kod qr, który można zeskanować, lub możemy po prostu kliknąć na niego, aby
+\Jest kod qr, który można zeskanować, lub możemy po prostu kliknąć na niego, aby
 skopiować url.
 
 ### Historia

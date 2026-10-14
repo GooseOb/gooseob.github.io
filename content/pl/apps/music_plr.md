@@ -2,7 +2,7 @@
 
 ### Content
 
-Jest wyszukiwarka z dostawcami: YouTube, SoundCloud, Bandcamp, Last.fm i
+\Jest wyszukiwarka z dostawcami: YouTube, SoundCloud, Bandcamp, Last.fm i
 MusicBrainz. Możemy wchodzić w artystów, albumy i playlisty, startować radio
 piosenki i artysty i zapisywać wszystko do biblioteki.
 

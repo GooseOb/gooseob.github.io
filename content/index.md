@@ -36,7 +36,7 @@ WebStorm VSCode NeoVim
 
 @h-2(databases)
 
-SQL: Oracle PostgreSQL Prisma Drizzle
+SQL: Oracle PostgreSQL Prisma Drizzle MySQL
 
 NoSQL: Redis MongoDB
 
@@ -44,7 +44,7 @@ NoSQL: Redis MongoDB
 
 Cloudflare AWS Firebase
 
-NodeJS Bun tRPC Express.js NestJS
+NodeJS Bun tRPC Express.js NestJS Java Spring Boot PHP
 
 @h-2(standards)
 
@@ -54,11 +54,13 @@ WCAG HTTP Web Sockets REST API SOLID Design patterns
 
 Agile Scrum Kanban Test-Driven Development
 
+@h-2(desktop)
+
+Rust iced
+
 @h-2(otherTech)
 
-Rust iced Python Java Kotlin Bash
-
-PHP MySQL Markdown
+Python Kotlin Bash Markdown
 
 @h-1(stats, 📊)
 
