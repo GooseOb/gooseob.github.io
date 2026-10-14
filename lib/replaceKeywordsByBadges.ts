@@ -31,6 +31,11 @@ const toBadge = ($0: string) =>
 		badges[$0.toLowerCase() as BadgeKey]
 	}' alt='${$0}' class='tech-label'>`;
 
+const codeSegmentRegex = /(<pre[\s\S]*?<\/pre>|<code[\s\S]*?<\/code>)/g;
+
+const replaceOutsideCodeBlocks = (text: string) =>
+	text.replace(keywordsRegex, toBadge).replace(specialRegex, toBadge);
+
 const groupBy: Replacer<[string]> = (text, separator) =>
 	`<div>${text.split(separator).join('</div><div>')}</div>`.replace(
 		/\\<\/div><div>/g,
@@ -40,7 +45,14 @@ const groupBy: Replacer<[string]> = (text, separator) =>
 const group: Replacer = (text) => groupBy(groupBy(text, ','), ';');
 
 export const replaceKeywordsByBadges: Replacer = (text) =>
-	text.replace(keywordsRegex, toBadge).replace(specialRegex, toBadge);
+	text
+		.split(codeSegmentRegex)
+		.map((part) =>
+			part.startsWith('<pre') || part.startsWith('<code')
+				? part
+				: replaceOutsideCodeBlocks(part)
+		)
+		.join('');
 
 export const replaceStackKeywordsByBadges: Replacer = (text) =>
 	replaceKeywordsByBadges(group(text));
