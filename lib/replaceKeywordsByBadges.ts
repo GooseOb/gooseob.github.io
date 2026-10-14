@@ -12,12 +12,15 @@ const specialBadges: Record<string, BadgeKey> = {
 	Jest: 'jest'
 };
 
-const generalKeys = Object.keys(badges).filter(
-	(key) => !Object.values(specialBadges).includes(key as BadgeKey)
-);
+const escapeRegExp = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+const generalKeys = Object.keys(badges)
+	.filter((key) => !Object.values(specialBadges).includes(key as BadgeKey))
+	.sort((a, b) => b.length - a.length)
+	.map(escapeRegExp);
 
 const keywordsRegex = new RegExp(
-	`(?<!http\\S*| \\S+="[^"]*)(${generalKeys.join('|')})`,
+	`(?<!http\\S*| \\S+="[^"]*)(?<!\\w)(${generalKeys.join('|')})(?!\\w)`,
 	'gi'
 );
 
