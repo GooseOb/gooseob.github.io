@@ -16,7 +16,11 @@ skrótem. W releaseach leży tarball z binarką i jest PKGBUILD do AUR.
 
 ### History
 
-Napisałem go w C w czerwcu 2026 roku w jakieś dwa tygodnie: init, dociąganie
-przykładów i opcji, zamiana języków, wejście z przyciskiem tłumaczenia i CI z
-formatowaniem. Na końcu zrobiłem requesty asynchroniczne, żeby okno nigdy nie
-wisiało.
+Reverso jest dla mnie bardzo przydatne do szybkiego tłumaczenia z innymi
+przykładami użycia w kontekście. Ale przeniosłem się z Windowsa na Linux, a ono
+nie działa tu nawet przez Wine.
+
+Więc napisałem apkę na Linux w C w czerwcu 2026 roku w dwa tygodnie: init,
+dociąganie przykładów i opcji, zamiana języków, wejście z przyciskiem
+tłumaczenia i CI z formatowaniem. Na końcu zrobiłem requesty asynchroniczne,
+żeby okno nigdy nie wisiało.

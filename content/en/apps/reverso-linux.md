@@ -16,6 +16,10 @@ Releases ship a tarball with the binary, and there is a PKGBUILD for the AUR.
 
 ### History
 
-I wrote it in C in June 2026 in about two weeks: init, examples and options
-fetching, language swap, input with the translate button, and CI with
+I find Reverso app very useful to get a quick tranlation with other examples of
+usage in context. But I moved from Windows to Linux, and the app does not work
+here even with Wine.
+
+So I wrote a linux app in C in June 2026 in about two weeks: init, examples and
+options fetching, language swap, input with the translate button, and CI with
 formatting. In the end I made the requests async so the window never freezes.
